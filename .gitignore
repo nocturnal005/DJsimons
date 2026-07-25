@@ -1,0 +1,10 @@
+node_modules/
+.vite/
+dist/
+*.log
+.env
+.DS_Store
+*.zip
+temp_*
+curated_catalogue_stitch.html
+animated_editorial_stitch.html
