@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Precision Machinery — DJ Simons &amp; Sons</title>
+    <style>
+        @layer base {
+            html, body { margin: 0; padding: 0; }
+            body { overscroll-behavior: none; }
+            main > :first-child { margin-top: 0 !important; }
+            main > :last-child { margin-bottom: 0 !important; }
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-tertiary-container": "#a17f3b",
+                        "burnished-gold": "#C5A059",
+                        "outline-variant": "#c4c7c7",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#656461",
+                        "secondary-fixed": "#e5e2dd",
+                        "secondary": "#5f5e5b",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary": "#000000",
+                        "primary-container": "#1c1b1b",
+                        "tertiary-container": "#261900",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fdf8f8",
+                        "surface-container-high": "#ebe7e6",
+                        "inverse-surface": "#313030",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#e5e2e1",
+                        "subtle-grey": "#8C8C8C",
+                        "surface-dim": "#ddd9d8",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-primary-container": "#858383",
+                        "soft-border": "#D9D4CC",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-container-lowest": "#ffffff",
+                        "charcoal-black": "#1A1A1A",
+                        "on-secondary-fixed-variant": "#474743",
+                        "outline": "#747878",
+                        "surface-container-low": "#f7f3f2",
+                        "background": "#fdf8f8",
+                        "inverse-primary": "#c8c6c5",
+                        "antique-parchment": "#F5F2ED",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#e5e2dd",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-surface-variant": "#444748",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f1edec",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface": "#fdf8f8",
+                        "secondary-fixed-dim": "#c9c6c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background font-body-md text-on-background">
+    <header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border">
+        <div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
+            <div class="flex items-center gap-stack-lg">
+                <a class="font-headline-md text-headline-md text-primary tracking-tight" data-path="home" href="index.html">DJ SIMONS</a>
+            </div>
+            <nav class="hidden lg:flex items-center gap-stack-lg h-full" data-active-classes="text-burnished-gold border-b-2 border-burnished-gold">
+                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="mouldings" href="mouldings.html">MOULDINGS</a>
+                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="boards" href="#">BOARDS</a>
+                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="sundries" href="#">SUNDRIES</a>
+                <a aria-current="page" class="font-nav-link transition-colors py-2 text-burnished-gold border-b-2 border-burnished-gold" data-path="machinery" href="machinery.html">MACHINERY</a>
+                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="chop-service" href="#">CHOP SERVICE</a>
+            </nav>
+            <div class="flex items-center gap-stack-md">
+                <button class="p-2 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">search</span></button>
+                <button class="p-2 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">shopping_bag</span></button>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full pt-20 bg-background">
+        <div class="flex flex-col w-full">
+            <!-- Hero Section -->
+            <section class="relative w-full min-h-[90vh] flex items-center overflow-hidden -mt-20">
+                <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter pt-32 lg:pt-40">
+                    <div class="lg:col-span-7 flex flex-col justify-center animate-fade-in-up">
+                        <span class="font-label-caps text-label-caps text-burnished-gold mb-stack-md tracking-[0.3em] uppercase block">Industrial Excellence</span>
+                        <h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary mb-stack-lg leading-none">
+                            Precision <br/> <span class="italic">Machinery</span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-secondary max-w-md opacity-0 translate-y-4 transition-all duration-1000 delay-300" id="hero-subline">
+                            Engineering the future of fine framing since 1970. Our workshop-grade equipment defines the standard for bespoke craftsmanship.
+                        </p>
+                        <div class="mt-stack-lg flex gap-stack-md items-center opacity-0 translate-y-4 transition-all duration-1000 delay-500 animate-reveal">
+                            <button class="bg-charcoal-black text-antique-parchment px-8 py-4 font-nav-link text-nav-link hover:bg-burnished-gold transition-colors duration-300 uppercase tracking-widest">
+                                View Catalogue
+                            </button>
+                            <button class="border border-soft-border px-8 py-4 font-nav-link text-nav-link text-primary hover:bg-antique-parchment transition-colors duration-300 uppercase tracking-widest">
+                                Technical Specs
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative mt-12 lg:mt-0 flex items-center justify-center">
+                        <div class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[600px] overflow-hidden shadow-2xl animate-float">
+                            <img alt="Premium framing workshop equipment" class="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLup0viU9yF5Mfq1Ko1ZMSBO5MT_DCrpsQ5hj00hHCm0eHGv6j4-UBhMT8HE0cMakXk7P8LDorXR6tL3AARC3DEZLFwqM_8PvteLRgFg2XeRImcoe14TppxP4aq1SVCrjT4V5UTK2SqohwRaO7-rKC51mR-bwKWxt6XbVDJyvjQg68ZgxBn2aA1cl76CDkvXc6_jRlSeKII4te2Mw35avItIUyzp2Xi2ta0CnpOynDRXIlrV5Cz4htfpujM"/>
+                        </div>
+                        <!-- Decorative element -->
+                        <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-burnished-gold/10 backdrop-blur-sm -z-10"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Specification Highlight -->
+            <section class="w-full py-section-gap bg-antique-parchment">
+                <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-stack-lg border-y border-soft-border py-stack-lg">
+                        <div class="flex flex-col gap-2">
+                            <span class="font-label-caps text-label-caps text-burnished-gold">01. TOLERANCE</span>
+                            <p class="font-headline-md text-headline-md text-primary">0.01mm Precision</p>
+                        </div>
+                        <div class="flex flex-col gap-2 border-l border-soft-border pl-stack-lg lg:border-l lg:pl-stack-lg border-transparent lg:border-soft-border">
+                            <span class="font-label-caps text-label-caps text-burnished-gold">02. DURABILITY</span>
+                            <p class="font-headline-md text-headline-md text-primary">Industrial Grade</p>
+                        </div>
+                        <div class="flex flex-col gap-2 border-l border-soft-border pl-stack-lg lg:border-l lg:pl-stack-lg border-transparent lg:border-soft-border">
+                            <span class="font-label-caps text-label-caps text-burnished-gold">03. SUPPORT</span>
+                            <p class="font-headline-md text-headline-md text-primary">Lifetime Warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Grid Section -->
+            <section class="w-full py-section-gap bg-background">
+                <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+                    <div class="flex flex-col lg:flex-row justify-between items-end mb-section-gap gap-stack-lg">
+                        <div class="max-w-2xl">
+                            <h2 class="font-display-lg text-display-lg-mobile lg:text-headline-lg text-primary mb-stack-md">Essential Shop Equipment</h2>
+                            <p class="font-body-md text-body-md text-secondary">A curated collection of industry-leading machinery designed for high-volume production without compromising on the artisanal touch.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="font-label-caps text-label-caps text-subtle-grey">Refine By:</span>
+                            <button class="font-nav-link text-nav-link border-b border-primary pb-1">All Machinery</button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter lg:gap-y-24">
+                        <!-- Item 1: Precision Mitre Saws -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Precision Mitre Saw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLu4HfRDn5bE_d3t7mAfS-XZuOUWxy012q71_14jaoAJdb9RIcMNaS_xg9nXRrnAqas9JfYzTpYFbcnep4B-ocEo4QiToTaUJmJynpjwZOG8fhrQnA4jZmhtnPQYA2WHaVlAHmWqWv7Fuujn11tprmo5FQjGF8mfrtELYDsV57_aUkNP43IxRRforE4WoJCDjdMtaauiaSVN3L4lePbycen20SfXukPBly9LGuiXq17UP4SDdwqo6F4YeF8M"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">CUTTING SYSTEMS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Precision Mitre Saws</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">The backbone of any workshop. Our saws deliver flawless joins every time.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2: Industrial Underpinners -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-100">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Industrial Underpinner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLup0viU9yF5Mfq1Ko1ZMSBO5MT_DCrpsQ5hj00hHCm0eHGv6j4-UBhMT8HE0cMakXk7P8LDorXR6tL3AARC3DEZLFwqM_8PvteLRgFg2XeRImcoe14TppxP4aq1SVCrjT4V5UTK2SqohwRaO7-rKC51mR-bwKWxt6XbVDJyvjQg68ZgxBn2aA1cl76CDkvXc6_jRlSeKII4te2Mw35avItIUyzp2Xi2ta0CnpOynDRXIlrV5Cz4htfpujM"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">JOINING TECHNOLOGY</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Industrial Underpinners</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">High-pressure pneumatic joining for consistent mitre strength.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3: Wall-Mounted Cutters -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-200">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Wall-Mounted Cutter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuTWRIuO2GJZ3HVq8ksfsOCgN0JALhsZGCE-VHrul2dZLrlHPQigfTRsy10HjNJRozXsmiQv5orvLv86wEsr-XuHQrfVkXEXxyYrBhSVPpfmFxikI3l6-4hbFNqDH_4H08fPY6RZI-Khp3RnmFqP8V_Wt1tqmLwXjSyEdT8yUEuL94GBIV3VvySmR2tnlcr0sc4hU-gfaxondoLH8o1Tc4xP0bowqw7KAlwfjJ1HTXiVTuG_0ypVNPHSL0"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">PROCESSING UNITS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Wall-Mounted Cutters</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Space-saving vertical precision for glass, board, and acrylic.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4: Precision Mount Cutters -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-300">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Precision Mount Cutter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuMr6tXMzLr8IjNkKqWfyzjqhsoPtmIw62FkcOQP59vLJQsCX9500tHnmfdDH3bOb4JHZ8u_o5Jqr8gWCjspjljbTN62LQW2PB6Rc1-v0BuWJIJqsOdV20n-Po4Fsmm1pEhJfN4iWiqM1rc0FaxGPaAlg1pE7MYeV_2FtZWV5ZgdfEeaAHmmuMKqkWKJHE_OZFIo4rEoLXNQRnIA2o6mhTbzSdlgjseQ83_iJNrTlWJVMsVX0z3g8jxgAzH"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">MOUNTING SYSTEMS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Precision Mount Cutters</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Advanced vertical and horizontal cutting systems for consistent mountboard sizing.</p>
+                            </div>
+                        </div>
+                        <!-- Item 5: Professional Underpinners -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Professional Underpinner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLu4ilpzFJJ8JbGASzfTt1wiRkJIeT6sHtrnG30Fo8zR_KNOIqt8jWM_qm8UIuultiq6bWpMIjRJzi44SijSCjmpUEDZPr_OXgIJfqXnmM4ehp7Sm_pS1LgWmxl_fdJG87X_18dZMJs1KZZ6g4N2-s1kstvvW6Tweyyo_96dISGJVtyKv5MaFHxXdTjdBtlZZbMf7MztJomhHvj6yAh6O8-_qBInf6oaTHpal4w0Nm56UaF63DViKEWR052F"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">JOINING TECHNOLOGY</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Professional Underpinners</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">High-leverage manual joining for bespoke framing and repair.</p>
+                            </div>
+                        </div>
+                        <!-- Item 6: Double Mitre Systems -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-100">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Double Mitre System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtjfxeNpdj34s7fGkLXbYcgt3JSV8-suhvaryb12dWmEWy6sUJs1V4PUd4murFfYxc5687fKgia5InZIFQpv1pbub8xk1FSniajhQTl2OVlv2BfQW2xHJzqiwZThFGxItWeuxWH_t2STp2_LZee2_0tCHGg8iwj6UCt63njVUqRbZi1Dbm9GiArCr9_j60_rwroCFntUuxV2D9CdSOEr0VGArvnn9o1TRvQN7oDbsRzFfP-zMkuAzoNrig"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">CUTTING SYSTEMS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Double Mitre Systems</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Industrial-grade double mitre cutting for high-volume production efficiency.</p>
+                            </div>
+                        </div>
+                        <!-- Item 7: Dust Extraction Systems -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-200">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Dust Extraction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Jy0t5IQuNqsIf9Rc5saIK-Fxu8QBCHJ7ztBHhfK3pWnkAAeqbwcqkt_Nbj4eNLHjdNfDsrk6CukyypK9exsyzJR-ILdsMBYp8Jetg0jeJ57mIAdvFpZL2E_yKyouH5bPzLudhbg_VjTrmGBRaAtLml4QGqlJZzvVUifZaq-vtscRLtVql6beTI3sP8suGppEcsjq-TohgFdZPJHur86Kl33FnlUdyERe1mXHcVxQ9If1k7WmCzQecnMYrdmHWjQ8Vtv0i-DKCBO7"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">WORKSHOP SAFETY</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Dust Extraction</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">High-capacity filtration systems for a clean and safe workshop environment.</p>
+                            </div>
+                        </div>
+                        <!-- Item 8: Glass Cutting Tables -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-300">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Glass Cutting Tables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALFaIjELEkvhLZcMCnUZz3AxCT_SqDBxOzCgYHXwn_7PugAJARW4mr1zlxxlk8GEkGSx2XjdrxuSeUoF0dN3OmvyAni-swCNnOA1P59kzboEHbi6Qc8-Ymxn_juYJ8V_8h5p1UdB3lojd2am2kfmBoNUXQsxnKM1_IrViAb65KoozxGAO533WL4CpKyP9RWR29cp79d6ZHKoaSV6dkPsgvWOrGiwPFuez3wIhFnZH5vzBvubka__Su46xlGhpVdvFi3I-urMPzQB7s"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">PROCESSING UNITS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Glass Cutting Tables</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Precision-engineered surfaces for safe and accurate glass handling.</p>
+                            </div>
+                        </div>
+                        <!-- Item 9: Pneumatic Fittings -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Pneumatic Fittings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1edfi0r8rVUDl-zZ1wS54kqOdCriAbgRu4o7GoWld-JPgn2DIyDk3d68JwH6Qzzpbe1igNgWa8fVAzrlE6m6NaZD4QqLhUDi99JA_g-wlX7eYk-SNv7CGuIQVQ9gm0xeYfamuoTSDfcXHHAHnTRj4qw2azI2pGsa7r6AynjMxEwlyPBhW6AKlUYS-QE15elyAU5d7Djxg9byjhMvDgNvQPhQrHl8JJtghajCtURSUAYAZdutYaa1NpkdbVpilfjjhgIWm75fz2gv4"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">ACCESSORIES</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Pneumatic Fittings</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Essential components for maintaining peak machinery performance.</p>
+                            </div>
+                        </div>
+                        <!-- Item 10: Digital Calipers -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-100">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Digital Calipers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACjoko0thw4tVBoZndQMIoDrI_71wuX9jcDWGmbXKpWPGwF230oy3dDe_cJAnxvP4mGJWfSU8KKlBLxY_806G8dapCq2IHjm5jntkF2vumKxSn6H2G0paEsM3kXPUK-I7s9yz6vXPen0lt3eoe6DeHWfo1y2Jnw3vig66Saa6KDojtNZaknALNKqkppvohPu_yj0MNlwEqd0nFbKk_ltcBKzJamaR8jvjw8H-zXxO56n0szU-j4WX8OrgDvbOM0BMXv3fRomi_iGv8"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">MEASUREMENT</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Digital Calipers</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Ultra-precise measurement tools for the most demanding projects.</p>
+                            </div>
+                        </div>
+                        <!-- Item 11: Silent Compressors -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-200">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Silent Compressors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl_Z55vP6DJ3Ms_SzwF1SVkxhufN8VF63b7sIS_NdjIn5-jElJMxI4c8tV0rP7Vp4eCLR1W4KYdCr38RU5Pmpo_UI1V0arN3e9xR-L1g3LoGcG6uyUyw6YfSxqf8jaYnpzSEoE7X_aGiLkgZ8yvPzIcY5jkHpHQ2hf1Hayvp0Rxd_hHbxnj6Oq5VorJ8oLOWupLhnKe-B6xBxve_co53W3RIrt4a4lN3ckE6R97DvpY8bEGsxN3PfRLcdB-jDdAuQFoNlLVgqDpL3U"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">POWER SYSTEMS</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Silent Compressors</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Reliable air supply with minimal noise for focused workshop environments.</p>
+                            </div>
+                        </div>
+                        <!-- Item 12: Moulding Racks -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-300">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Moulding Racks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4RL5Y8R4PFqwzcMEBP81PL92u33X_MqCk2UaDlrEKQPMsIKh-q0zKsYVZLAoMUxr4uwt8xBz7hyMYUcd4-Hj8J3pdI6AC6XThbv4Lwgoe92DZiw7Uc4VzWuHO8zwe5XWVYmWNt9B_Gy4PUvO7JHu1RqSL6MjTb5cRD_VjL_9jaHSSK9UV107V0BDw-2gjoUb5NQMaHmnnQBlZQgtpJEY4Gphlga_O-FFWhFnGbDpCc3VJ_TAD2ePTvK4YmpyfYlS-kN64dyo3KXju"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">STORAGE</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Moulding Racks</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Heavy-duty vertical storage solutions for efficient material management.</p>
+                            </div>
+                        </div>
+                        <!-- Item 13: Service Kits -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Service Kits" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrHj7A-vwLgmyi2uYZa3DPqs7oHizaLjHpIpRcPxfqhxoW8B89bQCajTEp6q_AqVj_iGgvlX57UtYf9ByX-RP9rEdAz49f2MBc_HNofIxlcq0RPKMjJ8BMpE1Ka_ETAGcd-9W6-uQZse2iy5VyeAzB8GUpLJ39FwLCaN5aVu2XJYGalP4sjeaEmJ9ChkF8OqHG2Bwjei-Z9iTHY7SYZFw63CDYIO-eDEm7vcx5-lzO4pC062LppfRem7cGWNR40DBmFZmjdxj7uuci"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">MAINTENANCE</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Service Kits</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Comprehensive maintenance packages for all major machinery brands.</p>
+                            </div>
+                        </div>
+                        <!-- Item 14: LED Inspection Lamps -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-100">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="LED Inspection Lamps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqGbaoMpdzO8KAWApDJfVrsojbABcgiJdjjX1AKoIvN-pgXWdNWI34XKAV639pgMnzd6zDbKlnY67CxRZWhuOW3tbAeGqjzrZzXovSoue7WqEVCCc9fjiXqyaRmrrzhPD_iDmGsnE74l9n70MjFQmmiSAgYRa0yHxJ4CXxR0MwxyH8WTfUDvn1BwFijYA8v3K-Uoa1A7Qd1USAyaa1GhPBjCi26DaqPANUIg7duafXrD8eBX-bkPIv-8a1fTqSMnO8Q2EIE-yfVRWx"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">WORKSHOP LIGHTING</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">LED Inspection Lamps</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">High-CRI lighting for accurate color matching and flaw detection.</p>
+                            </div>
+                        </div>
+                        <!-- Item 15: CNC Mount Cutters -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-200">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="CNC Mount Cutters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsXjwih_2uCvx87Gvg94h3UeL6ysL9NWSSUiSW4hU1jzPVqF8kzQCvFgTLHCdDDo40zYlWDqTZau0e2nSf6u77Reemt_Dqje_LArg3EMqSGbHKbQgJTOgnJkPKkEDfX1cSeii7dKIaYeDhGpImxmf0fZ7dKX8kPGOaDFc39JaBQYh3m0LJz10r-syl2knjQ3nlALhek-25VzTaissRosUF-wKzcgkQwahiXxMdTVF8iZHkohbUUYjdwIpFbjM2oC8_U6BaqRRBkbb"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">AUTOMATION</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">CNC Mount Cutters</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Fully automated precision for high-volume bespoke mount production.</p>
+                            </div>
+                        </div>
+                        <!-- Item 16: Operator Protection -->
+                        <div class="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-300">
+                            <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md relative">
+                                <img alt="Operator Protection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfIX3uaSTNRQYFzyNMmZ0e4nNnOdn95r8wFyLU5GkAR9cSmchqg3WsgOJ9VtLNCLKW7a1f0i8GOLApTmGIawP2G8p9iPjee7nkqaMMdNtP--QhNi5sjFdkPjs1a5wWbTo0y7IuKfX7y_ZdoErH50K9GfRbQ8L51RSf0EcvCKz9c7gBW5wVp3DlUMQLLKSTOPxoNY61D7opUEwJ6en52gueWDOlN1yC42xlpMRqN_BXTfdEoPl8GOwTgJ1meQEVyhLmVsm7M_AByuqc"/>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+                                <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-charcoal-black p-4">
+                                    <button class="w-full text-center text-on-primary font-label-caps text-label-caps uppercase tracking-widest">Enquire for Quote</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-label-caps text-[10px] text-burnished-gold mb-1">SAFETY</span>
+                                <h3 class="font-headline-md text-headline-md text-primary group-hover:text-burnished-gold transition-colors">Operator Protection</h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 line-clamp-2">Advanced guarding and emergency stop systems for all machinery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Editorial Callout -->
+            <section class="w-full py-section-gap overflow-hidden">
+                <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+                    <div class="relative bg-charcoal-black p-stack-lg lg:p-24 flex flex-col lg:flex-row items-center gap-gutter">
+                        <div class="lg:w-1/2 flex flex-col z-10">
+                            <span class="font-label-caps text-label-caps text-burnished-gold mb-stack-md">LEGACY OF INNOVATION</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-primary mb-stack-lg">Built for the next 50 years.</h2>
+                            <p class="font-body-lg text-body-lg text-subtle-grey mb-stack-lg max-w-md">Our machinery isn't just about the cut; it's about the confidence that every piece leaving your workshop meets the highest standard of excellence.</p>
+                            <div class="flex flex-col gap-stack-sm text-on-primary font-body-md">
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined text-burnished-gold">check_circle</span>
+                                    <span>On-site technician installation</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined text-burnished-gold">check_circle</span>
+                                    <span>Direct access to replacement parts</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined text-burnished-gold">check_circle</span>
+                                    <span>Bespoke training for your team</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 relative">
+                            <div class="w-full aspect-square border border-burnished-gold/20 flex items-center justify-center p-8 group overflow-hidden">
+                                <svg class="w-full h-full text-burnished-gold/30 animate-spin-slow opacity-50 group-hover:opacity-100 transition-opacity" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" fill="none" r="48" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.5"></circle>
+                                    <circle cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-width="0.5"></circle>
+                                    <path d="M50 2 L50 98 M2 50 L98 50" stroke="currentColor" stroke-width="0.2"></path>
+                                    <rect fill="none" height="30" stroke="currentColor" stroke-width="1" width="30" x="35" y="35"></rect>
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="font-display-lg text-6xl text-burnished-gold opacity-80 italic">DJ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support CTA -->
+            <section class="w-full py-section-gap bg-surface-container-low">
+                <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop text-center">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-stack-md uppercase tracking-tight">Technical Consultation</h2>
+                    <p class="font-body-md text-body-md text-secondary max-w-2xl mx-auto mb-stack-lg">Unsure which system fits your volume? Speak with our machinery experts for a customized workshop workflow audit.</p>
+                    <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border-b border-primary hover:text-burnished-gold hover:border-burnished-gold transition-all pb-1" href="#">
+                        BOOK A DEMO <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="w-full bg-charcoal-black py-section-gap mt-section-gap">
+        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-stack-lg">
+                <div class="col-span-2">
+                    <h3 class="font-headline-md text-headline-md text-on-primary mb-stack-md">DJ SIMONS</h3>
+                    <p class="font-body-md text-body-md text-subtle-grey max-w-sm">Purveyors of fine picture framing materials since 1970. Excellence in craftsmanship, legacy in supply.</p>
+                </div>
+                <div class="flex flex-col gap-stack-sm">
+                    <span class="font-label-caps text-label-caps text-burnished-gold mb-2">COLLECTIONS</span>
+                    <a class="text-on-primary font-nav-link text-nav-link" href="mouldings.html">Mouldings</a>
+                    <a class="text-on-primary font-nav-link text-nav-link" href="#">Chop Service</a>
+                </div>
+                <div class="flex flex-col gap-stack-sm">
+                    <span class="font-label-caps text-label-caps text-burnished-gold mb-2">SUPPORT</span>
+                    <a class="text-on-primary font-nav-link text-nav-link" href="#">Delivery</a>
+                    <a class="text-on-primary font-nav-link text-nav-link" href="#">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-on-secondary-fixed-variant pt-stack-md flex justify-between items-center text-subtle-grey font-label-caps text-label-caps">
+                <span>© 2024 DJ SIMONS &amp; SONS LTD.</span>
+                <div class="flex gap-stack-md">
+                    <span class="material-symbols-outlined">terminal</span>
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1.2s ease-out forwards;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+        .animate-reveal {
+            animation: fade-in-up 1s ease-out 0.5s forwards;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate hero subline
+            setTimeout(() => {
+                const subline = document.getElementById('hero-subline');
+                if(subline) {
+                    subline.classList.remove('opacity-0', 'translate-y-4');
+                    subline.classList.add('opacity-100', 'translate-y-0');
+                }
+            }, 300);
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-12');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
