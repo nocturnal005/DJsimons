@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DJ Simons | Chop Service</title>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    
+    /* Animation Classes */
+    .reveal {
+      opacity: 0;
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up { transform: translateY(40px); }
+    .reveal-right { transform: translateX(-40px); }
+    .reveal-left { transform: translateX(40px); }
+    .reveal-fade { transform: scale(0.98); }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 200ms; }
+    .stagger-3 { transition-delay: 300ms; }
+    .stagger-4 { transition-delay: 400ms; }
+    .stagger-5 { transition-delay: 500ms; }
+
+    @keyframes tracking-in {
+      from { letter-spacing: -0.05em; opacity: 0; }
+      to { letter-spacing: -0.02em; opacity: 1; }
+    }
+    .animate-heading {
+      animation: tracking-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Respect prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .animate-heading, .transition-transform, .transition-all {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#1c1b1b",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#313030",
+            "outline": "#747878",
+            "primary": "#000000",
+            "surface-variant": "#e5e2e1",
+            "primary-fixed": "#e5e2e1",
+            "burnished-gold": "#C5A059",
+            "tertiary-fixed": "#ffdea5",
+            "tertiary-fixed-dim": "#e9c176",
+            "error": "#ba1a1a",
+            "primary-container": "#1c1b1b",
+            "charcoal-black": "#1A1A1A",
+            "on-secondary-container": "#656461",
+            "antique-parchment": "#F5F2ED",
+            "on-surface-variant": "#444748",
+            "surface": "#fdf8f8",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1c1c19",
+            "secondary-fixed": "#e5e2dd",
+            "inverse-primary": "#c8c6c5",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#c9c6c2",
+            "on-primary-fixed-variant": "#474746",
+            "on-surface": "#1c1b1b",
+            "secondary-container": "#e5e2dd",
+            "on-tertiary-container": "#a17f3b",
+            "on-tertiary-fixed-variant": "#5d4201",
+            "on-tertiary": "#ffffff",
+            "secondary": "#5f5e5b",
+            "surface-container-low": "#f7f3f2",
+            "surface-tint": "#5f5e5e",
+            "tertiary-container": "#261900",
+            "surface-container-high": "#ebe7e6",
+            "subtle-grey": "#8C8C8C",
+            "tertiary": "#000000",
+            "on-tertiary-fixed": "#261900",
+            "on-primary-container": "#858383",
+            "on-primary-fixed": "#1c1b1b",
+            "on-secondary-fixed-variant": "#474743",
+            "on-error": "#ffffff",
+            "surface-dim": "#ddd9d8",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e5e2e1",
+            "background": "#fdf8f8",
+            "surface-bright": "#fdf8f8",
+            "surface-container": "#f1edec",
+            "inverse-on-surface": "#f4f0ef",
+            "primary-fixed-dim": "#c8c6c5",
+            "soft-border": "#D9D4CC",
+            "outline-variant": "#c4c7c7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-sm": "8px",
+            "stack-lg": "32px",
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "gutter": "32px",
+            "section-gap": "120px",
+            "stack-md": "16px",
+            "margin-mobile": "20px"
+          },
+          "fontFamily": {
+            "display-lg": ["EB Garamond"],
+            "label-caps": ["Hanken Grotesk"],
+            "body-md": ["Hanken Grotesk"],
+            "nav-link": ["Hanken Grotesk"],
+            "headline-md": ["EB Garamond"],
+            "headline-lg": ["EB Garamond"],
+            "body-lg": ["Hanken Grotesk"],
+            "display-lg-mobile": ["EB Garamond"]
+          },
+          "fontSize": {
+            "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "nav-link": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-antique-parchment font-body-md text-on-surface min-h-screen flex flex-col">
+<header class="fixed top-0 w-full z-50 bg-antique-parchment/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.02)] border-b border-soft-border">
+<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
+<div class="flex-1">
+<a class="font-headline-lg text-headline-lg tracking-tight uppercase" data-path="home" href="index.html">DJ Simons</a>
+</div>
+<nav class="hidden lg:flex flex-[2] items-center justify-center gap-stack-lg">
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="mouldings" href="mouldings.html">Mouldings</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="boards" href="boards.html">Boards</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="sundries" href="#">Sundries</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="machinery" href="machinery.html">Machinery</a>
+<a aria-current="page" class="font-nav-link transition-colors uppercase text-burnished-gold border-b border-burnished-gold" data-path="chop-service" href="chop-service.html">Chop Service</a>
+</nav>
+<div class="flex-1 flex items-center justify-end gap-stack-md">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined text-on-surface">search</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined text-on-surface">person</span></button>
+<button class="relative p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">shopping_bag</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-charcoal-black text-antique-parchment text-[10px] flex items-center justify-center rounded-full">0</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<div class="flex flex-col w-full">
+<!-- Immersive Hero Section -->
+<section class="relative min-h-screen lg:h-screen -mt-20 overflow-hidden flex flex-col lg:flex-row bg-antique-parchment">
+<!-- Left Content Area (45%) -->
+<div class="lg:w-[45%] w-full flex items-center z-10 pt-20 lg:pt-0">
+<div class="px-margin-mobile lg:px-margin-desktop max-w-2xl">
+<span class="inline-block font-label-caps text-label-caps text-charcoal-black/60 uppercase tracking-[0.3em] mb-stack-md animate-heading">Bespoke Manufacturing</span>
+<h1 class="font-display-lg text-display-lg text-charcoal-black mb-stack-md leading-none animate-heading">
+              DJ Simons <br/>
+<span class="italic font-headline-lg text-burnished-gold">Chop Service</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg max-w-lg reveal reveal-up active stagger-1">
+              Precision engineering for the modern framer. We cut, you create. Eliminate waste and focus on the final masterpiece.
+            </p>
+<div class="flex flex-col sm:flex-row gap-stack-md reveal reveal-up active stagger-2">
+<button class="bg-burnished-gold text-charcoal-black px-8 py-4 font-label-caps text-label-caps uppercase hover:bg-charcoal-black hover:text-antique-parchment hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Start Your Order</button>
+<button class="border border-soft-border text-charcoal-black px-8 py-4 font-label-caps text-label-caps uppercase hover:bg-charcoal-black hover:text-antique-parchment hover:shadow-xl hover:-translate-y-1 transition-all duration-300">View Catalog</button>
+</div>
+</div>
+</div>
+<!-- Right Image Area (55%) -->
+<div class="lg:w-[55%] w-full relative h-[50vh] lg:h-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[2000ms] ease-out scale-110 active-scale-100 reveal reveal-fade" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvsvU9PJaKLfci9aWuytDqPllBBYcf4X5oTB220Y1lBMBoX2ojUhiZm1q_6tMN81zCFKOzFoWoFq31icFaqPlNd_z9QEa_gcrk3AAgpvFePJia2YuJiAziuGtwBFG8Q9033q0W6syE0zh7ayFWKh-mYtrQ9itzsNdG_mVDdnQV_nNJCmJUwqKKTUbDJlt7f5pgV5jB0YBApO1_uEzOZ9RA6nQJfGBaUok4KTxZLHK0j7sXOBCWzaxVN2PQ')"></div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 right-margin-desktop hidden lg:flex items-center gap-stack-md z-20 reveal reveal-left stagger-4">
+<span class="font-label-caps text-[10px] text-charcoal-black/50 uppercase tracking-widest">Scroll to explore process</span>
+<div class="h-[1px] w-24 bg-charcoal-black/20"></div>
+</div>
+</div>
+</section>
+<!-- Actionable Visual Process -->
+<section class="py-section-gap bg-antique-parchment">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-section-gap gap-stack-lg">
+<div class="max-w-xl reveal reveal-up">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-stack-md">A Masterclass in Precision</h2>
+<p class="font-body-md text-on-surface-variant">Our three-stage workflow ensures that every length of moulding arrives at your workshop ready for immediate assembly, meeting the highest standards of the fine art industry.</p>
+</div>
+<div class="font-display-lg text-surface-container-highest opacity-50 hidden lg:block reveal reveal-left">01—03</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Step 01 -->
+<div class="group cursor-default reveal reveal-up stagger-1">
+<div class="relative overflow-hidden mb-stack-lg aspect-[1.49] shadow-sm group-hover:shadow-2xl transition-all duration-700">
+<img alt="Inspection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfKZLb-uBsPn5GA9ja9qTJK5da2b4UhuffMIzqWQSIr97WUVmj7una-BGnl4c2vm47AQd2lThD89OfAp9-Pjie2w-pyBKZvCMw7a2skb9kyGmAq7r2ieHefdr8gpNM6_PyDvTezoxhfp6xLUbkm98TYZSCKkI6vD7Bm7yjbgNO7BBXHHidk96eZmp2gfNLW20FGIaVqAJT72paAqXxFIA30gGOlVzAKM_80q7C5-ySLxw6PKNQ-DkYJ7ADAeo9XV8P1JNuMDLWQ1w4"/>
+<div class="absolute top-4 left-4 bg-charcoal-black text-antique-parchment w-10 h-10 flex items-center justify-center font-label-caps">01</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm group-hover:text-burnished-gold transition-colors">Rigorous Inspection</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Each length is manually inspected by our craftsmen. We scrutinize the grain, finish, and structural integrity, ensuring only flawless timber reaches the saw.</p>
+</div>
+<!-- Step 02 -->
+<div class="group cursor-default mt-12 lg:mt-24 reveal reveal-up stagger-2">
+<div class="relative overflow-hidden mb-stack-lg aspect-[1.49] shadow-sm group-hover:shadow-2xl transition-all duration-700">
+<img alt="Precision Cut" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq3oMCaBQjyPjfu-1l1UFid_64MigpPcc9D-HMbUxkIfIvxOKK0-f1E5ZtdtX95EynWAKlPC9fRrQKkS-IhOWSEZWgO56igS08QnHLSOvPi38pxhYj2VS1zdbAYhsiFpbqfFe8BL8DgLOA7JZjxZtAmCttNWgN1A1YCe0RYOtFqF2BlD29530o1g5HDWOstO2ncOfCfGWTucJfeAGPEvf5-Fnmliu9ElruwTkTD1-OHRl26RCNdskbwJPetp1YGVR2nvh_tP46mxxG"/>
+<div class="absolute top-4 left-4 bg-charcoal-black text-antique-parchment w-10 h-10 flex items-center justify-center font-label-caps">02</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm group-hover:text-burnished-gold transition-colors">The Cassese Cut</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Using world-class Cassese Double Mitre technology, we achieve sub-millimeter accuracy. This guarantees seamless joins and perfect geometry for every frame.</p>
+</div>
+<!-- Step 03 -->
+<div class="group cursor-default mt-12 lg:mt-0 reveal reveal-up stagger-3">
+<div class="relative overflow-hidden mb-stack-lg aspect-[1.49] shadow-sm group-hover:shadow-2xl transition-all duration-700">
+<img alt="Packaging" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZBohrcc3mNGzUPZEq5Sz_GO-XGk5EVE--SeSz20zI7irtb14Jw3_RgawKO-i3f5U59QlyuWX1ATZh_NGnk8nYCmgffq2o9OVjKYnHIVOyOoHsBka8XIz3s3f6QckBbkpCfLAo28xnhllR76g5ysRHumB57tEYls6IO1KEZ2oSDDY3pH83i5_IZTV9YKs61IAhQE7K0T6nBySWO0qfAkNmXXTJ_XLSZaqYXVz0dpB6MjHdYjIGKeooU1HimOmKrHSrsO1KzYmR7wzy"/>
+<div class="absolute top-4 left-4 bg-charcoal-black text-antique-parchment w-10 h-10 flex items-center justify-center font-label-caps">03</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm group-hover:text-burnished-gold transition-colors">Secure Logistics</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Your mitred lengths are wrapped in protective archival-grade packaging. We treat every order as a fragile masterpiece, ensuring safe transit to your gallery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Heritage Advantage -->
+<section class="bg-charcoal-black text-antique-parchment overflow-hidden">
+<div class="flex flex-col lg:flex-row">
+<div class="lg:w-1/2 p-margin-mobile lg:p-margin-desktop flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-burnished-gold uppercase tracking-[0.2em] mb-stack-md reveal reveal-up">Why Choose Simons</span>
+<h2 class="font-display-lg text-headline-lg lg:text-display-lg mb-section-gap leading-tight reveal reveal-up stagger-1">Elevating the <br/><span class="italic">Standard of Supply</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="flex flex-col gap-stack-sm group reveal reveal-right stagger-1">
+<span class="material-symbols-outlined text-burnished-gold text-3xl group-hover:translate-x-2 transition-transform duration-500">inventory_2</span>
+<h4 class="font-label-caps text-label-caps uppercase">Access Wider Ranges</h4>
+<p class="font-body-md text-subtle-grey">Stocking hundreds of mouldings is impossible. With Chop, our entire 2,000+ SKU inventory is your inventory.</p>
+</div>
+<div class="flex flex-col gap-stack-sm group reveal reveal-right stagger-2">
+<span class="material-symbols-outlined text-burnished-gold text-3xl group-hover:translate-x-2 transition-transform duration-500">timer</span>
+<h4 class="font-label-caps text-label-caps uppercase">Reclaim Your Time</h4>
+<p class="font-body-md text-subtle-grey">Reduce labor hours by 60%. Skip the cutting and sanding; move directly to joining and finishing.</p>
+</div>
+<div class="flex flex-col gap-stack-sm group reveal reveal-right stagger-3">
+<span class="material-symbols-outlined text-burnished-gold text-3xl group-hover:translate-x-2 transition-transform duration-500">eco</span>
+<h4 class="font-label-caps text-label-caps uppercase">Zero Waste Policy</h4>
+<p class="font-body-md text-subtle-grey">Stop paying for offcuts. You pay only for the exact dimensions you need, down to the millimeter.</p>
+</div>
+<div class="flex flex-col gap-stack-sm group reveal reveal-right stagger-4">
+<span class="material-symbols-outlined text-burnished-gold text-3xl group-hover:translate-x-2 transition-transform duration-500">precision_manufacturing</span>
+<h4 class="font-label-caps text-label-caps uppercase">Precision Joining</h4>
+<p class="font-body-md text-subtle-grey">Perfect mitres every time. Our industrial machinery outperforms standard workshop saws for a cleaner finish.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative min-h-[600px] overflow-hidden reveal reveal-fade">
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-80 mix-blend-luminosity scale-110 active-scale-100 reveal-image-trigger" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq3oMCaBQjyPjfu-1l1UFid_64MigpPcc9D-HMbUxkIfIvxOKK0-f1E5ZtdtX95EynWAKlPC9fRrQKkS-IhOWSEZWgO56igS08QnHLSOvPi38pxhYj2VS1zdbAYhsiFpbqfFe8BL8DgLOA7JZjxZtAmCttNWgN1A1YCe0RYOtFqF2BlD29530o1g5HDWOstO2ncOfCfGWTucJfeAGPEvf5-Fnmliu9ElruwTkTD1-OHRl26RCNdskbwJPetp1YGVR2nvh_tP46mxxG')"></div>
+<div class="absolute inset-0 bg-gradient-to-l from-charcoal-black via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Transparent Pricing & Calculation -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<div class="lg:w-5/12 reveal reveal-up">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-stack-md">Transparent <br/>Professional Pricing</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg">We believe in a simple, predictable cost structure. No hidden fees for handling or waste calculation. One formula fits all.</p>
+<div class="p-stack-lg bg-antique-parchment border border-soft-border hover:border-burnished-gold transition-colors duration-500">
+<div class="flex items-center gap-stack-md mb-stack-sm">
+<span class="font-label-caps text-label-caps text-burnished-gold uppercase tracking-widest">The Formula</span>
+</div>
+<div class="font-display-lg text-headline-lg lg:text-headline-lg text-charcoal-black">
+                  Retail <span class="text-burnished-gold">×</span> 2
+                </div>
+<p class="font-body-md text-on-surface-variant mt-stack-md">The chop price is calculated by doubling the standard per-meter retail rate of the moulding.</p>
+</div>
+</div>
+<div class="lg:w-7/12 reveal reveal-left stagger-2">
+<div class="bg-charcoal-black text-antique-parchment p-stack-lg lg:p-margin-desktop relative overflow-hidden group hover:shadow-2xl transition-all duration-700">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-lg">Example Calculation</h3>
+<div class="space-y-stack-md">
+<div class="flex justify-between items-center border-b border-soft-border/20 pb-4">
+<span class="font-body-md text-subtle-grey">Moulding Ref</span>
+<span class="font-body-md font-bold uppercase">Classic Oak (124-A)</span>
+</div>
+<div class="flex justify-between items-center border-b border-soft-border/20 pb-4">
+<span class="font-body-md text-subtle-grey">Retail Price (per meter)</span>
+<span class="font-body-md">£12.50</span>
+</div>
+<div class="flex justify-between items-center border-b border-soft-border/20 pb-4">
+<span class="font-body-md text-subtle-grey">Chop Rate (per meter)</span>
+<span class="font-body-md text-burnished-gold">£25.00</span>
+</div>
+<div class="flex justify-between items-center border-b border-soft-border/20 pb-4">
+<span class="font-body-md text-subtle-grey">Order Length (Total)</span>
+<span class="font-body-md">2.4 Meters</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Total Order Value</span>
+<span class="font-headline-md text-headline-md text-burnished-gold group-hover:scale-105 transition-transform origin-right duration-500">£60.00</span>
+</div>
+</div>
+<p class="mt-stack-lg text-[12px] font-body-md text-subtle-grey italic text-right">*Prices exclude VAT and shipping.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How to Order -->
+<section class="py-section-gap bg-antique-parchment">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop text-center mb-stack-lg reveal reveal-up">
+<span class="font-label-caps text-label-caps text-burnished-gold uppercase tracking-[0.2em]">Efficiency Refined</span>
+<h2 class="font-headline-lg text-headline-lg mt-stack-sm">How to Order</h2>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<!-- Connector Line -->
+<div class="hidden md:block absolute top-8 left-0 w-full h-[1px] bg-soft-border z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center group reveal reveal-up stagger-1">
+<div class="w-16 h-16 rounded-full bg-antique-parchment border border-soft-border flex items-center justify-center mb-stack-md group-hover:border-burnished-gold group-hover:shadow-lg transition-all duration-500">
+<span class="material-symbols-outlined text-charcoal-black group-hover:text-burnished-gold transition-colors duration-500">edit_note</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase mb-stack-sm group-hover:text-burnished-gold transition-colors duration-500">1. Order Form</h4>
+<p class="font-body-md text-on-surface-variant max-w-[200px]">Submit dimensions via our online portal or trade desk.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center group reveal reveal-up stagger-2">
+<div class="w-16 h-16 rounded-full bg-antique-parchment border border-soft-border flex items-center justify-center mb-stack-md group-hover:border-burnished-gold group-hover:shadow-lg transition-all duration-500">
+<span class="material-symbols-outlined text-charcoal-black group-hover:text-burnished-gold transition-colors duration-500">settings_overscan</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase mb-stack-sm group-hover:text-burnished-gold transition-colors duration-500">2. Processing</h4>
+<p class="font-body-md text-on-surface-variant max-w-[200px]">Our expert team translates your specs into precision saw paths.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center group reveal reveal-up stagger-3">
+<div class="w-16 h-16 rounded-full bg-antique-parchment border border-soft-border flex items-center justify-center mb-stack-md group-hover:border-burnished-gold group-hover:shadow-lg transition-all duration-500">
+<span class="material-symbols-outlined text-charcoal-black group-hover:text-burnished-gold transition-colors duration-500">verified</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase mb-stack-sm group-hover:text-burnished-gold transition-colors duration-500">3. Quality Check</h4>
+<p class="font-body-md text-on-surface-variant max-w-[200px]">Manual verification of every mitre angle and surface finish.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center group reveal reveal-up stagger-4">
+<div class="w-16 h-16 rounded-full bg-antique-parchment border border-soft-border flex items-center justify-center mb-stack-md group-hover:border-burnished-gold group-hover:shadow-lg transition-all duration-500">
+<span class="material-symbols-outlined text-charcoal-black group-hover:text-burnished-gold transition-colors duration-500">local_shipping</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase mb-stack-sm group-hover:text-burnished-gold transition-colors duration-500">4. Delivery</h4>
+<p class="font-body-md text-on-surface-variant max-w-[200px]">Next-day shipping in secure, protective artisan packaging.</p>
+</div>
+</div>
+<div class="mt-section-gap bg-charcoal-black p-stack-lg lg:p-margin-desktop flex flex-col lg:flex-row items-center justify-between gap-stack-lg reveal reveal-up stagger-5">
+<div class="text-left">
+<h3 class="font-headline-md text-headline-md text-antique-parchment mb-stack-sm">Ready to begin your project?</h3>
+<p class="font-body-md text-subtle-grey">Download our latest chop order form or log in to order online.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-stack-md w-full lg:w-auto">
+<a class="bg-burnished-gold text-charcoal-black px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest text-center hover:bg-white transition-colors duration-500" href="#">Online Portal</a>
+<a class="border border-soft-border/30 text-antique-parchment px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest text-center hover:bg-burnished-gold hover:text-charcoal-black hover:border-burnished-gold transition-all duration-500" href="#">Download PDF</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="w-full bg-charcoal-black text-antique-parchment pt-section-gap pb-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-section-gap">
+<div class="flex flex-col gap-stack-md reveal reveal-up stagger-1">
+<h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Products</h3>
+<div class="flex flex-col gap-stack-sm">
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="mouldings.html">Picture Mouldings</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="boards.html">Mountboards</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Workshop Sundries</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="machinery.html">Framing Machinery</a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-md reveal reveal-up stagger-2">
+<h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Company</h3>
+<div class="flex flex-col gap-stack-sm">
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">About Us</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Our History</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Sustainability</a>
+<a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-md reveal reveal-up stagger-3">
+<h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Follow Us</h3>
+<div class="flex gap-stack-md items-center">
+<a class="hover:text-burnished-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="hover:text-burnished-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-md reveal reveal-up stagger-4">
+<h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Newsletter</h3>
+<p class="font-body-md text-subtle-grey mb-stack-sm">Join our curated mailing list for trade insights.</p>
+<div class="flex border-b border-soft-border pb-2 group">
+<input class="bg-transparent border-none focus:outline-none flex-grow font-body-md text-antique-parchment placeholder:text-on-primary-container" placeholder="Email address" type="email"/>
+<button class="font-label-caps text-label-caps uppercase tracking-widest hover:text-burnished-gold transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-stack-lg border-t border-soft-border/10 flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="font-label-caps text-label-caps text-subtle-grey uppercase">© 2024 DJ Simons &amp; Sons. All Rights Reserved.</div>
+<div class="flex gap-stack-lg">
+<a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Terms</a>
+<a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Intersection Observer for reveal animations
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            
+            // Special trigger for scale-back on images
+            if (entry.target.classList.contains('active-scale-100')) {
+              entry.target.style.transform = 'scale(1)';
+            }
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      // Observe all reveal elements
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Observe hero image and background images for subtle scale-down
+      document.querySelectorAll('.active-scale-100, .reveal-image-trigger').forEach(el => {
+        const imgObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.transform = 'scale(1)';
+            }
+          });
+        }, { threshold: 0.1 });
+        imgObserver.observe(el);
+      });
+
+      // Smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body></html>
