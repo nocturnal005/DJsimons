@@ -1,196 +1,482 @@
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@100..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"on-background":"#1c1b1b","error-container":"#ffdad6","on-secondary":"#ffffff","inverse-surface":"#313030","outline":"#747878","primary":"#000000","surface-variant":"#e5e2e1","primary-fixed":"#e5e2e1","burnished-gold":"#C5A059","tertiary-fixed":"#ffdea5","tertiary-fixed-dim":"#e9c176","error":"#ba1a1a","primary-container":"#1c1b1b","charcoal-black":"#1A1A1A","on-secondary-container":"#656461","antique-parchment":"#F5F2ED","on-surface-variant":"#444748","surface":"#fdf8f8","surface-container-lowest":"#ffffff","on-secondary-fixed":"#1c1c19","secondary-fixed":"#e5e2dd","inverse-primary":"#c8c6c5","on-primary":"#ffffff","secondary-fixed-dim":"#c9c6c2","on-primary-fixed-variant":"#474746","on-surface":"#1c1b1b","secondary-container":"#e5e2dd","on-tertiary-container":"#a17f3b","on-tertiary-fixed-variant":"#5d4201","on-tertiary":"#ffffff","secondary":"#5f5e5b","surface-container-low":"#f7f3f2","surface-tint":"#5f5e5e","tertiary-container":"#261900","surface-container-high":"#ebe7e6","subtle-grey":"#8C8C8C","tertiary":"#000000","on-tertiary-fixed":"#261900","on-primary-container":"#858383","on-primary-fixed":"#1c1b1b","on-secondary-fixed-variant":"#474743","on-error":"#ffffff","surface-dim":"#ddd9d8","on-error-container":"#93000a","surface-container-highest":"#e5e2e1","background":"#fdf8f8","surface-bright":"#fdf8f8","surface-container":"#f1edec","inverse-on-surface":"#f4f0ef","primary-fixed-dim":"#c8c6c5","soft-border":"#D9D4CC","outline-variant":"#c4c7c7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"stack-sm":"8px","stack-lg":"32px","margin-desktop":"64px","container-max":"1440px","gutter":"32px","section-gap":"120px","stack-md":"16px","margin-mobile":"20px"},"fontFamily":{"display-lg":["EB Garamond"],"label-caps":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"nav-link":["Hanken Grotesk"],"headline-md":["EB Garamond"],"headline-lg":["EB Garamond"],"body-lg":["Hanken Grotesk"],"display-lg-mobile":["EB Garamond"]},"fontSize":{"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"500"}],"label-caps":["12px",{"lineHeight":"1.4","letterSpacing":"0.15em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"nav-link":["14px",{"lineHeight":"1.0","letterSpacing":"0.05em","fontWeight":"500"}],"headline-md":["32px",{"lineHeight":"1.3","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"1.2","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg-mobile":["40px",{"lineHeight":"1.2","fontWeight":"500"}]}}}}</script></head><body class="bg-antique-parchment font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-antique-parchment/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.02)] border-b border-soft-border"><div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><div class="flex-1"><a class="font-headline-lg text-headline-lg tracking-tight uppercase" data-path="home" href="index.html">DJ Simons</a></div><nav class="hidden lg:flex flex-[2] items-center justify-center gap-stack-lg" data-active-classes="text-burnished-gold border-b border-burnished-gold"><a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="mouldings" href="mouldings.html">Mouldings</a><a aria-current="page" class="font-nav-link transition-colors uppercase text-burnished-gold border-b border-burnished-gold" data-path="boards" href="boards.html">Boards</a><a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="sundries" href="#">Sundries</a><a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="machinery" href="machinery.html">Machinery</a><a class="font-nav-link text-nav-link text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="chop-service" href="#">Chop Service</a></nav><div class="flex-1 flex items-center justify-end gap-stack-md"><button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined text-on-surface">search</span></button><button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined text-on-surface">person</span></button><button class="relative p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined text-on-surface">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-charcoal-black text-antique-parchment text-[10px] flex items-center justify-center rounded-full">0</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-2 border border-soft-border" src="https://lh3.googleusercontent.com/aida/AP1WRLuIm-JfY3kwpztPsG8ty8qJJXgpKX6ZAet2gWtQMkUS6ZJya5Tj9m5GTuMTJ7Is4kKDPscM-cqpphdqyHeuVjSUutqrYvBRmzPP5WuD_913l5HFgxOzZAAdcBBqpxG6iQVY3kQ9-jzsqux5UMhItZg-si0HZiQircso8wbdntpkxYb-PQNlstIQfBwwa554AX8V1i3KYTjl74FS1gDQSqrRVM2YQ8gA7-fqZy3KrmWMbA7aeSnbAmANAfbo"/></div></div></header><main class="flex-grow pt-20"><div class="flex flex-col w-full">
-<!-- Editorial Hero Section -->
-<section class="relative w-full px-margin-mobile lg:px-margin-desktop pt-stack-lg overflow-hidden">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
-<div class="lg:col-span-5 mb-section-gap lg:mb-0">
-<span class="font-label-caps text-label-caps text-burnished-gold uppercase mb-stack-md block">Premium Foundations</span>
-<h1 class="font-display-lg text-display-lg mb-stack-lg leading-tight">
-          Mounting & <br/>
-<span class="italic text-subtle-grey">Barrier Boards</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
-          Curated mounting, backing, and barrier boards for every occasion. From archival preservation to decorative depth, our range provides the structural soul of every frame.
-        </p>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Boards Collection — DJ Simons &amp; Sons</title>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "primary": "#000000",
+            "on-tertiary-fixed-variant": "#5d4201",
+            "on-tertiary-container": "#a17f3b",
+            "burnished-gold": "#C5A059",
+            "outline-variant": "#c4c7c7",
+            "on-surface": "#000000",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#1c1b1b",
+            "secondary-fixed": "#e5e2dd",
+            "secondary": "#1c1b1b",
+            "on-primary-fixed-variant": "#1c1b1b",
+            "tertiary": "#000000",
+            "primary-container": "#1c1b1b",
+            "tertiary-container": "#261900",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fdf8f8",
+            "surface-container-high": "#ebe7e6",
+            "inverse-surface": "#313030",
+            "surface-tint": "#5f5e5e",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#e5e2e1",
+            "subtle-grey": "#444748",
+            "surface-dim": "#ddd9d8",
+            "tertiary-fixed-dim": "#e9c176",
+            "on-primary-container": "#000000",
+            "soft-border": "#D9D4CC",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdea5",
+            "on-tertiary-fixed": "#261900",
+            "surface-container-lowest": "#ffffff",
+            "charcoal-black": "#000000",
+            "on-secondary-fixed-variant": "#1c1b1b",
+            "outline": "#747878",
+            "surface-container-low": "#f7f3f2",
+            "background": "#fdf8f8",
+            "inverse-primary": "#c8c6c5",
+            "antique-parchment": "#F5F2ED",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#000000",
+            "on-background": "#000000",
+            "secondary-container": "#e5e2dd",
+            "inverse-on-surface": "#f4f0ef",
+            "on-surface-variant": "#000000",
+            "error-container": "#ffdad6",
+            "surface-container": "#f1edec",
+            "primary-fixed-dim": "#c8c6c5",
+            "surface-variant": "#e5e2e1",
+            "on-primary-fixed": "#000000",
+            "surface-container-highest": "#e5e2e1",
+            "surface": "#fdf8f8",
+            "secondary-fixed-dim": "#c9c6c2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-lg": "32px",
+            "margin-mobile": "20px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "stack-sm": "8px",
+            "stack-md": "16px",
+            "section-gap": "120px"
+          },
+          "fontFamily": {
+            "nav-link": ["Montserrat", "sans-serif"],
+            "label-caps": ["Montserrat", "sans-serif"],
+            "body-lg": ["EB Garamond", "serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "display-lg-mobile": ["Playfair Display", "serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "body-md": ["Hanken Grotesk", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"]
+          },
+          "fontSize": {
+            "nav-link": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "600"}],
+            "label-caps": ["11px", {"lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "700"}],
+            "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+            "headline-lg": ["44px", {"lineHeight": "1.2", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "display-lg": ["72px", {"lineHeight": "1.05", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+          .reveal-item.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+            animation: fade-in 1.2s ease-out forwards;
+          }
+        </style></head>
+<body class="bg-background font-body-md text-on-background">
+<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border">
+<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
+<div class="flex items-center gap-stack-lg">
+<a class="font-headline-md text-[28px] text-primary tracking-tight" data-path="home" href="index.html">DJ SIMONS</a>
 </div>
-<div class="lg:col-span-7 relative group">
-<div class="aspect-[4/3] overflow-hidden bg-surface-variant">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photograph of high-quality architectural mountboards stacked at an angle. The textures of various papers—linens, smooth mats, and fibrous grains—are visible in soft, natural morning light. The color palette includes cream, charcoal, burnished gold, and a deep sky blue, mirroring the company's artisanal legacy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6N45mKOZBZSSNCjb6Bucd7G6FRIT46LOjPnDppNL6iTzNWFid3FoFVbZS59D7AsDktevpYuWKso1m-owKWM0yWzhBUld3fCxXlyQN205e7t_WVWUWD2GszmhhUkfPJgRCISWa0DnAdXBhk5_bioMpWxIOPX6G2PD33UpjeNJ9e8Hzq2fFnCx4MJ_pqhwvMDqecFiqrviEeg0sfbvdATFOOF74hyLL1KR3LKdkSvR8wXPICSu9hKHIQK_QqSc2qoye3gAoyEWRRRN"/>
+<nav class="hidden lg:flex items-center gap-stack-lg h-full">
+<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="mouldings" href="mouldings.html">MOULDINGS</a>
+<a aria-current="page" class="font-nav-link text-nav-link text-burnished-gold border-b-2 border-burnished-gold py-2 uppercase" data-path="boards" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="sundries" href="#">SUNDRIES</a>
+<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="machinery" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="chop-service" href="#">CHOP SERVICE</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="p-2 text-on-background hover:text-burnished-gold"><span class="material-symbols-outlined">search</span></button>
+<button class="p-2 text-on-background hover:text-burnished-gold"><span class="material-symbols-outlined">shopping_bag</span></button>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
 </div>
-<div class="absolute -bottom-12 -left-12 hidden lg:block bg-charcoal-black p-stack-lg max-w-xs shadow-xl">
-<p class="font-label-caps text-label-caps text-subtle-grey uppercase mb-2">Heritage Quality</p>
-<p class="font-headline-md text-headline-md text-antique-parchment leading-none">Captivating textures, colours and styles.</p>
 </div>
+</header>
+<main class="w-full pt-20 bg-background">
+<div class="flex flex-col w-full bg-background overflow-hidden">
+<!-- Hero Section with Parallax Effect -->
+<section class="relative h-[90vh] flex items-center overflow-hidden -mt-20">
+<div class="absolute inset-0 z-0 scale-110" id="hero-parallax" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl1UCJdVvYHhntMaszJulXMzIbQHOLvWRHCAMNuMF-w43nG1c3ytZMNxgeg40CX4zObUqSnyfwgR9he6j1kpttFh9WS35R-Zh3KBvOK_3ZqAKmeIfFCGaGqLsih0nV7t7aJNabZTCQJwKz1HcEcRjB_m5pCQpul46d-TZ2ePJiZ8qqsca2voLC2Xuw9977wKbzmXWMwAUnqAqMT5aJx8GBmz37VlM1OM6ehN8QRFtJi5Akpq1ID-zlyOdm6MLoUWSrfsuyNwcgzsVc'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop w-full pt-20">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-burnished-gold mb-stack-md block uppercase animate-fade-in">EQUIPMENT &amp; SURFACES</span>
+<h1 class="font-display-lg text-display-lg mb-stack-md leading-none text-black">
+              The Boards <br>Collection
+            </h1>
+<p class="font-body-lg text-body-lg text-white/95 max-w-md leading-relaxed italic">
+              A curation of high-performance surfaces for the modern craftsman, engineered for longevity and aesthetic precision.
+            </p>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
+<span class="material-symbols-outlined text-white text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Narrative Information Cards -->
+<section class="relative z-20 -mt-24 px-margin-mobile lg:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Barrier Boards -->
+<div class="bg-antique-parchment p-stack-lg shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-item border-l-4 border-burnished-gold active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<h3 class="font-headline-md text-headline-md mb-stack-md text-black">Barrier Boards</h3>
+<p class="font-body-md text-body-md text-on-background leading-relaxed mb-stack-lg">
+              Conservation layers that protect artwork from backing board acidity. Essential for museum-grade framing.
+            </p>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 hover:border-burnished-gold transition-colors uppercase" href="#">EXPLORE SPECIFICATIONS</a>
+</div>
+<!-- Backing Boards -->
+<div class="bg-white p-stack-lg shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-item border-l-4 border-black active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<h3 class="font-headline-md text-headline-md mb-stack-md text-black">Backing Boards</h3>
+<p class="font-body-md text-body-md text-on-background leading-relaxed mb-stack-lg">
+              From standard MDF to smooth grey finishes, selected for stability and texture. Includes foam core and specialty wood pulp.
+            </p>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 hover:border-burnished-gold transition-colors uppercase" href="#">VIEW TEXTURES</a>
+</div>
+<!-- Mounting Boards -->
+<div class="bg-antique-parchment p-stack-lg shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-item border-l-4 border-burnished-gold active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<h3 class="font-headline-md text-headline-md mb-stack-md text-black">Mounting Boards</h3>
+<p class="font-body-md text-body-md text-on-background leading-relaxed mb-stack-lg">
+              Engineered for precision heat and cold mounting processes, compatible with vacuum presses and roller systems.
+            </p>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 hover:border-burnished-gold transition-colors uppercase" href="#">TECHNICAL DATA</a>
 </div>
 </div>
 </section>
-<!-- Featured Range: Daler Rowney -->
-<section class="w-full py-section-gap px-margin-mobile lg:px-margin-desktop bg-surface-container-low">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-6 order-2 lg:order-1">
-<div class="aspect-square relative overflow-hidden">
-<img alt="New DALER Mountboard Range" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsE7wNpZ1nzj5HAYkfkKoArYrOuZSHf1OaJfJhosrJ3ORgYwVCiAOoY5XGKgqgXqsiNRnop_J2gy6WmNRnEkvyhJ8DbY4RufvSyZS9-n2OUn-0nklAG4wXcayhPvkcH--R-MmhvRaQFwmkHHsLJRClr4aUtlysXMq5UtSUQwwbepzgW62mejN_O4rkxM_ImBWK4Act4h2yfx3tDh11Y3RgLG6sppSRskuUAcYtNrKzcEYqk7Y2Q-OxLIFzP"/>
-<!-- Decorative accent -->
-<div class="absolute top-0 right-0 w-32 h-32 bg-antique-parchment/10 backdrop-blur-sm -mr-16 -mt-16 rotate-45"></div>
-</div>
-</div>
-<div class="lg:col-span-5 lg:col-start-8 order-1 lg:order-2 mb-stack-lg lg:mb-0">
-<div class="flex items-center gap-stack-sm mb-stack-md">
-<span class="h-px w-12 bg-burnished-gold"></span>
-<span class="font-label-caps text-label-caps text-burnished-gold uppercase">New Arrival</span>
-</div>
-<h2 class="font-display-lg text-headline-lg lg:text-display-lg mb-stack-lg">The New DALER Mountboard Range</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
-          Experience the pinnacle of British craftsmanship. The new Daler Rowney collection introduces 42 new shades, including textured linens and acid-free cores designed for lifelong preservation.
-        </p>
-<button class="bg-charcoal-black text-antique-parchment px-stack-lg py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-burnished-gold transition-colors duration-300">
-          Explore the Collection
-        </button>
-</div>
+<!-- Elegant Pull Quote -->
+<section class="section-gap flex flex-col items-center text-center px-margin-mobile">
+<div class="max-w-2xl border-y border-soft-border py-stack-lg relative">
+<span class="material-symbols-outlined absolute -top-4 left-1/2 -translate-x-1/2 bg-background px-4 text-burnished-gold">format_quote</span>
+<p class="font-body-lg text-headline-lg italic text-black leading-tight">
+            "For conservation, the barrier is essential; for all else, the choice is guided by texture and touch."
+          </p>
+<span class="font-label-caps text-label-caps text-primary mt-stack-md block uppercase">RULE OF THUMB — DJ SIMONS ADVISORY</span>
 </div>
 </section>
-<!-- Categorical Exploration -->
-<section class="w-full py-section-gap px-margin-mobile lg:px-margin-desktop">
-<div class="flex flex-col lg:flex-row justify-between items-baseline mb-section-gap">
-<h2 class="font-display-lg text-headline-lg lg:text-display-lg">Browse by Specification</h2>
-<span class="font-body-md text-subtle-grey">6 Distinct Categories / 400+ Variants</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-section-gap">
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist composition showing the cross-section of a high-quality backing board. The multi-layered structure is visible, emphasizing its thickness and rigidity. Soft shadows create depth against a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQHhjgRyu2ivfsaoyC6iApG6JV14ERT643b5wMWOguXWY4RdhsA6lg20cdl24NUBiWAPoXyANu1pj0XWA8Tpml1cb8kvoPsT7yuI5yrgdv7Mz4seaaXIkYPYxdC3V5dcIIutOJCmALoAdMHawo06yQ9uHeI_YGi2d860EjI5UEH4zyPD6FrehYOA3poUyxLcFswuNofyqbu0jut39KwR2kgEzPPhOdNKwr-Ixa4ZtZmmt6n_jOvEiN49EYMLqJStqB6HESF9fipKA"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Backing Boards</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">High-density greyboard and MDF alternatives for structural integrity.</p>
-</a>
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Clean white and cream barrier boards displayed with elegant spacing. The lighting highlights the smooth, acid-free surface texture intended for museum-grade conservation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP2s7sAG6RAU2rYGJadImDuoeg2EHQaseA2yRY5DGI81BMaQHLcvx1DrdU-vpiYWiZl1KGvfdZNRqTyjXCO0Ojq3pAYZD948BURKOzQe2RvYD42bwIhlF9rluaYhmfQ9RUjDfkLgqg5CJd5kZNz-DwJUDkwNP388gQaP3fwTOkm--Lr1Q7gBC8_qBa5x4esD-MLxc1rXYK6mBloVRMxxrowubZMSkHMNg2t0vjYySO5lCR7laBQuUqOE6wuxDPgESvL-l0pw_Hpwhs"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Barrier Boards</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Essential protection against acid migration and environmental pollutants.</p>
-</a>
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vibrant array of Daler Rowney mountboard samples fanned out like a color wheel. The shot focuses on the richness of the pigments and the precision of the cut edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzGD_hZzqFEPx1LD8VMx8M6EFwd6I33i1DJHDND9yw6IGJ9cy8qrBjPbwmfghdjL0uyG0A1-oHUX26cixgKjr0jMmRjG_K3LwXQdV6TqolVAgQnGnN-OcIMjpba3WOK3Plw-5QrebRi9R2DoAHDfGxymO7VK_CiDAJJyLLPOrQTQdGtRZAhhSRVzV0JabfnGGo4QrZ3Jnqm3_kFu-vT4gzGQXmFWM0wyMaQLOdDO_yOBW7mpe2yCgYfNuH5rJXaa5BWQHCBYbf9j6A"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Daler Rowney</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">The gold standard in mountboards. Superior bleed resistance and vibrancy.</p>
-</a>
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Self-adhesive foam boards with a corner slightly peeled back to show the adhesive layer. Professional workshop lighting, clean and functional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRRRbkyMPSEcaEZVErW3kb2BpAO2z8Lu21iXKII2IyoBN6eOcDSdcqM677QnBzAyR6cLy1YQAcKWpB4_Lv2r83aZ5OEKzt8Um1oc1frQPf6BxnVI4lNuS0Og_Be0j0JUJ7ldmK2ASXoTGRYBkGOmrVz_MODlKgjy1Ch8utw_Jd_Rw_MSMWezpDp1xqB_Or-29YeFvQnv8yjjgxQMeM84VglhdTzRF4TvjFDB8WifJj0so23Fk63oA0PCQRyfdwrYzIulz4MwGnlgNw"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Self-Adhesive</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Instant mounting solutions for photographs and lightweight artworks.</p>
-</a>
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Foamcore boards of varying thicknesses stacked vertically. The lightweight nature is conveyed through the airy, bright lighting of a modern framing studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMo-4cUP9XZEK5-MSqigqxo6gKKEFrwKYZSssNtKFW61sPoE7Wv7EBHDYEMHrI4LqfI_x8eNFORW3sHwWhTamT7lQgTunplJidvPhue7HnoYu4pahIlad6b-WZCXgPHnf8RDsSNX3uRcK3QkQUqEVHI-GJE6hI8uJelqmIg9XnOIl_-tnpeB-u2ekfESUtbZPQhdopFgbnzlNkCcDR6SFGZOPuhdBSVCSu97DP2O5dI-k0Vaod7izYcXERs7mVHGmEtUHbf5A5ArcP"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Foamcore</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Ultra-lightweight boards for large-scale displays and temporary exhibitions.</p>
-</a>
-<!-- Category Item -->
-<a class="group flex flex-col gap-stack-md" href="#">
-<div class="h-64 bg-antique-parchment overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up of conservation-grade white-core mountboards. The pristine white edge of the bevel cut is the focal point, demonstrating quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5LGhSvZ7Wkh3z-swnfyrfqUtFkLuvvQFvg9p8inD9mMLG7aJHpQbKrxQOul2vx7hoexRvh1mN8lR2gZ-2rKA6AMGy0VJXJDxsTtz7goiKcwm7umDuULfQ19QJ4YN-7lNyFQB5MpBuyyrY3f-kuOJuvVW0VmumX3-aI2dSsqzxHiBDnmLFhkDLa5iPVFeVgwyQY3m7FwQxCigGgAOBLAlXwpRVXhfM1ixaZl2C4PT5HSb33kyjAN3lIpyjAbGcQc63jqsGlitcxzzT"/>
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-300"></div>
-</div>
-<div class="flex justify-between items-center border-b border-soft-border pb-stack-sm">
-<h3 class="font-headline-md text-headline-md">Standard Whitecore</h3>
-<span class="material-symbols-outlined text-subtle-grey group-hover:text-charcoal-black transition-colors">north_east</span>
-</div>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Versatile, everyday mountboards with a permanently white bevel.</p>
-</a>
-</div>
-</section>
-<!-- Technical Value Prop Overlay -->
-<section class="relative w-full py-section-gap px-margin-mobile lg:px-margin-desktop overflow-hidden">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-highest -z-10 hidden lg:block"></div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-5 py-12">
-<h2 class="font-display-lg text-headline-lg lg:text-display-lg mb-stack-lg italic">Built for <br/>Preservation.</h2>
-<div class="flex flex-col gap-stack-lg">
-<div class="flex gap-stack-md items-start">
-<span class="material-symbols-outlined text-burnished-gold">verified_user</span>
+<!-- 4x4 Product Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop mb-section-gap">
+<div class="flex justify-between items-end mb-stack-lg">
 <div>
-<h4 class="font-label-caps text-label-caps uppercase mb-1">Archival Grade</h4>
-<p class="font-body-md text-on-surface-variant">Chemically purified to remove lignin and neutralize acidity for 100+ years of protection.</p>
+<h2 class="font-headline-lg text-headline-lg text-black">Surface Selection</h2>
+<p class="font-body-md text-body-md text-on-background">Browse our professional range of specialist boards.</p>
+</div>
+<div class="flex gap-stack-md">
+<button class="p-2 border border-soft-border hover:bg-black hover:text-white transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="p-2 border border-soft-border hover:bg-black hover:text-white transition-colors"><span class="material-symbols-outlined">grid_view</span></button>
 </div>
 </div>
-<div class="flex gap-stack-md items-start">
-<span class="material-symbols-outlined text-burnished-gold">texture</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter" id="product-grid">
+<!-- Row 1 -->
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Conservation Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm5R1hW9wM3pKFagQ9XUrGn01uvWXFLIRO8oUyGX-D-_OolC9OKICc-q8UQvkBoVsFQzTZaFP7lLq9ZIZK0t_UWpXa-gvKHUR34wfWUfYO4oKaVxHNonY-uqpyIY-p_0V1LrhHJnNJP9RoTJD7ltzUoAAGrkztDGrXYr9lZP0Nv2AHeJJS8CiTNmB9HM2TGJ2KfYltVethjBHoQARY13fOb6dZPZElOdY60GSwFzWKxLXU-5ZJXaLc13KJj1l4KaKdh5WOq9F1Famj">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Conservation Barrier Board</h4>
+<p class="font-body-md text-black/70">£4.50 / sheet</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Heavy Grey Backing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4L9JJWNCpUlKugj61jzjshq25p3myfGGt_JmWAB-TLyQRD0damkH0jWTGqlZVBY5O6USWBFvZ4Z5GS2mc4eo0Pn_X9a6c4y8LWsvTh6Q-ZHyY6ohNTd0WRhCzfy7bAIpoERHK8HQyBJDlkjWw6noD07wZapPRsQVop-wB3SppdDGauKN-YAgTEcDJLbxhuSNe4T04JoEQgiZuPR-oe2VpWU3QzvzclxFodk0wKUNTo3MBOqMuY-0ChY1w6wQTg6mhIkKqPoH3i-fj">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Heavy-Duty Grey Backing</h4>
+<p class="font-body-md text-black/70">£12.00 / pack</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Thermal Heat Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUTwsPB63YN_lPu8S0o5g13SNipFvI01bpfchGFyrgQqfv5PCUtTKjO4BhDDz7C7SU2MS6wxLu7_VRlltOgzDyRj0lwHDxnOTjgrQVUKvcv4tnNvviyyXm3igJc8lD5Xg5scXTOlpm0-iVWIeOVxchZ3DcoJ2Td8RiFWHE9qV1kslDgIXt3HH_-xZSVwnmsLKCxdXKopVeLC9kgrNEDUT23FVnr7v7C8OB8Rc0g8YyMspdgvY2eXzcjQmuGde8XcFeHP7iokMtIZ_">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Thermal Heat-Activated Board</h4>
+<p class="font-body-md text-black/70">£18.40 / sheet</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Archival Film" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_xOHBsqmDa-Y3Zx09liQsrMObdmbU_ryj0cVC8y7VkFgLEl9btXk952bMNr3amd_gv8_T0mZVzxxm5WiC75zEzHxyyI1Erm4Poh7kzQige8XT40zApThCaRBKqdZa1EKgCwbQNH581BAsgCUTqlN35ycauy7gwLrVVmWvakQxmZFjub9U9R93fAhWbddx5_N9i7wOjLmUIc615eagKgqEkttdVPCzgPyRw0SZNQCoNXFHXSk8HYTuKq-p2ZmysqdoIlDWyWWg81K6">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Ultra-Thin Archival Film</h4>
+<p class="font-body-md text-black/70">£12.50 / roll</p>
+</div>
+<!-- Row 2 -->
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Premium Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLse5vxGCrWNN92MsIPLI_S2xIQ9VMAqtuykP5u9cbo-ssOxXBMp4EM8t7i4UfFkbrfbQOp89-KyAYIekLulusboMAL_-XuDkhUpieF7j4STHxkpSQjzY1m9jncHXJFEsS0SbSoiL9fFwHOgV9W22x9MNE65_KWCyuLrwPxImeUWDr8VXvbzJnrSXkdQrN8dTofDhsbloAMPAffV_XCjKFGz_03Bswjull3VQ8ySfF01JeEFjXHRCtgpm24N">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Premium Acid-Free Stack</h4>
+<p class="font-body-md text-black/70">£5.95 / sheet</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Kraft Wood Pulp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMWRF3XqN8hp_4yNdHrXqFOLb5mR2fi6iXkvhE8lHmnKppLM9bZEx93JuRq4bCWnj2K1IrxuivH5DXLjzx0k_RNNMK2khqBgHCvlc9C2mMMv9qv-3Lnp2m7IPSyAIMmnd0cbl_6oIhCAEo6Ku-O4h_MZvPyXQC8hmszzSO7Dbxj81FPVUEWGSgzLoR8BxZ6VnnckVHaIj8luHWljQewLH__-5lEkfJ1jzs3ToG7eliBZ4P1H1WR3m2X1r878mW2qjWswxq5JthcI75">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Kraft Lined Wood Pulp</h4>
+<p class="font-body-md text-black/70">£7.10 / sheet</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Cold Press Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLs2GPNqSaeY93MTU-ndXUHquKrrBGs1h4TTnrLFKkItOtwfS2byCmavy1f-V09wWGBKDWawuRBmkhPPcA6zR9U5BY49gw-hP9zGSfVwWOf9kDu_R3z2UkHIiNl1CExJwlxyIEwyaw1wlF1WiCNVgLIRf74MkPp_u1ZH-oy0rIjd5L8IS_SZRl40pC6Vx46WLNfdG24XLJ9ikjNz1xqk3_qIDYXWZXXy21NZX-2CWXs-f6trJKjOjdvOHX6B">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Professional Cold Press Mount</h4>
+<p class="font-body-md text-black/70">£15.50 / sheet</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Black Core Foam" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQkl1e0ThiUGxmBlPgqGlSUSjUZkY_BXZkDLNQHU66EvczgoeUE82x6IjOD7nfwQJ6O1hTY92qsCnTh9uBoWrUNc-PRHQY5pHjWRFbod0uyKL43t9S2K8Hz1PNZJ5e4iTstimHlvWrupoceUz4FzIE8WgzpKB7RvgNQ2hhTaSFiFtIyOdKlv95d577bx0k6Az3e4Aq4NQgd3_KviknnKMw_OYvVyTvt5mHiFbhHWE0-0C9KZDsbM6yOxFh9xdbC1dAlJgvJwHPaWs">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Premium Black Core Foam</h4>
+<p class="font-body-md text-black/70">£11.00 / sheet</p>
+</div>
+<!-- Row 3 & 4 visually using same pool to maintain 4x4 without duplicates -->
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Backing Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtj0TkZ2BSHrSP0uZg_tyh1LJZIvJ6DDCy5X0T_57Mzs394GKlMmiNAikDmcFe2m5n2AAtgt7h65whidSl3Zsyuwn6WUjY7UAHX9Plt9wM8VBiFiP3A1eyvXXC1cbA4mjmPQ2BxDM1HjZgtLQZG7iPRldmNBjq899cn5gqk-bgTZw7S2WmfysVlnTjGaV348xvOrj4qfmE7D_sURf4jRKkJdKUiMT9Uz5ruDuLHx_L6HjJf69P297iMI4Ax">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Specialist Backing Selection</h4>
+<p class="font-body-md text-black/70">From £9.00</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Specialty Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvL7YdcIc5AmNY7PBN-w-hAX-THkos2VAIPKi_neojBzZ3yWIekbV_NVBDY621HaOLLw_LXgI_04q_7G8T2VXxaCtzpoQko7TVtBGBDAgodJAPolilsR4oCSlBVIlOFVCu9qDdfiTXlbG8SN9rMDgATqpT4Epvpit0R4BGPJkCG8yKq95ts8o3FuEpZFCdURJp8oKskxC20NKebIda8lWcY4TPZzUs2yBvka7C_AYAeJizIds5Vb4wdDCiD">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Foam Core &amp; Pulp Samples</h4>
+<p class="font-body-md text-black/70">From £8.25</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Barrier Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm5R1hW9wM3pKFagQ9XUrGn01uvWXFLIRO8oUyGX-D-_OolC9OKICc-q8UQvkBoVsFQzTZaFP7lLq9ZIZK0t_UWpXa-gvKHUR34wfWUfYO4oKaVxHNonY-uqpyIY-p_0V1LrhHJnNJP9RoTJD7ltzUoAAGrkztDGrXYr9lZP0Nv2AHeJJS8CiTNmB9HM2TGJ2KfYltVethjBHoQARY13fOb6dZPZElOdY60GSwFzWKxLXU-5ZJXaLc13KJj1l4KaKdh5WOq9F1Famj">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Archival White Barrier</h4>
+<p class="font-body-md text-black/70">£4.75</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Mounting Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUTwsPB63YN_lPu8S0o5g13SNipFvI01bpfchGFyrgQqfv5PCUtTKjO4BhDDz7C7SU2MS6wxLu7_VRlltOgzDyRj0lwHDxnOTjgrQVUKvcv4tnNvviyyXm3igJc8lD5Xg5scXTOlpm0-iVWIeOVxchZ3DcoJ2Td8RiFWHE9qV1kslDgIXt3HH_-xZSVwnmsLKCxdXKopVeLC9kgrNEDUT23FVnr7v7C8OB8Rc0g8YyMspdgvY2eXzcjQmuGde8XcFeHP7iokMtIZ_">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Self-Adhesive Specialist</h4>
+<p class="font-body-md text-black/70">£14.20</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Grey Board" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4L9JJWNCpUlKugj61jzjshq25p3myfGGt_JmWAB-TLyQRD0damkH0jWTGqlZVBY5O6USWBFvZ4Z5GS2mc4eo0Pn_X9a6c4y8LWsvTh6Q-ZHyY6ohNTd0WRhCzfy7bAIpoERHK8HQyBJDlkjWw6noD07wZapPRsQVop-wB3SppdDGauKN-YAgTEcDJLbxhuSNe4T04JoEQgiZuPR-oe2VpWU3QzvzclxFodk0wKUNTo3MBOqMuY-0ChY1w6wQTg6mhIkKqPoH3i-fj">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Executive Smooth Grey</h4>
+<p class="font-body-md text-black/70">£22.00 / bulk</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Film Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOTWgy6LZ49JsAVDy7An4QZw5feqPdeX4wgFOLePAgM7ffwsCPpEhhdS1CRp3_LrWhC6nhgZ7zU5bJaVFSmpDnpLTcA8nzszvcy7nNlXEBQJkgWA13RNiTxJd3jGvELefeKK33I8kwyVF9aQnCQ3B-kDuKSQw24Orrc7TGvDVJQsKm-tPW8L85ut9VZr2eO2jWddeFiQR3NLoFnYde6NUxS8VVyhY5kc4X3DFCBZ_k-uReeoEYpkghAHI88jlFWNkvzHWwTp3c7Wzd">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Conservation Adhesive Film</h4>
+<p class="font-body-md text-black/70">£12.99</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Foam Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQkl1e0ThiUGxmBlPgqGlSUSjUZkY_BXZkDLNQHU66EvczgoeUE82x6IjOD7nfwQJ6O1hTY92qsCnTh9uBoWrUNc-PRHQY5pHjWRFbod0uyKL43t9S2K8Hz1PNZJ5e4iTstimHlvWrupoceUz4FzIE8WgzpKB7RvgNQ2hhTaSFiFtIyOdKlv95d577bx0k6Az3e4Aq4NQgd3_KviknnKMw_OYvVyTvt5mHiFbhHWE0-0C9KZDsbM6yOxFh9xdbC1dAlJgvJwHPaWs">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Industrial Grade Foam</h4>
+<p class="font-body-md text-black/70">£10.50</p>
+</div>
+<div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
+<img alt="Mounting Stand" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLs2GPNqSaeY93MTU-ndXUHquKrrBGs1h4TTnrLFKkItOtwfS2byCmavy1f-V09wWGBKDWawuRBmkhPPcA6zR9U5BY49gw-hP9zGSfVwWOf9kDu_R3z2UkHIiNl1CExJwlxyIEwyaw1wlF1WiCNVgLIRf74MkPp_u1ZH-oy0rIjd5L8IS_SZRl40pC6Vx46WLNfdG24XLJ9ikjNz1xqk3_qIDYXWZXXy21NZX-2CWXs-f6trJKjOjdvOHX6B">
+</div>
+<span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
+<h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Gatorfoam Heavy Duty</h4>
+<p class="font-body-md text-black/70">£19.99</p>
+</div>
+</div>
+<div class="mt-stack-lg flex justify-center">
+<button class="px-stack-lg py-stack-md bg-black text-on-primary font-label-caps tracking-widest hover:bg-burnished-gold transition-colors duration-300 uppercase">
+            LOAD FULL CATALOGUE
+          </button>
+</div>
+</section>
+<!-- Industrial Precision Section -->
+<section class="w-full bg-black py-section-gap text-on-primary overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div class="reveal-item active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<h2 class="font-headline-lg text-display-lg text-burnished-gold mb-stack-md">Industrial Precision.</h2>
+<p class="font-body-lg text-body-lg text-white/70 mb-stack-lg leading-relaxed italic">
+              Our boards are sourced from the world's leading mills, ensuring every sheet meets the rigorous demands of professional framing. From environmental control to mechanical stability, we prioritize the protection of your work.
+            </p>
+<div class="grid grid-cols-2 gap-stack-lg">
 <div>
-<h4 class="font-label-caps text-label-caps uppercase mb-1">Textural Variety</h4>
-<p class="font-body-md text-on-surface-variant">From smooth vellums to heavy-grained linens, choose the tactile surface that complements the art.</p>
+<span class="font-display-lg text-[48px] text-white leading-none">50+</span>
+<p class="font-label-caps text-burnished-gold mt-2 uppercase">YEARS EXPERTISE</p>
 </div>
-</div>
-<div class="flex gap-stack-md items-start">
-<span class="material-symbols-outlined text-burnished-gold">palette</span>
 <div>
-<h4 class="font-label-caps text-label-caps uppercase mb-1">Tonal Precision</h4>
-<p class="font-body-md text-on-surface-variant">Over 400 unique hues curated to bridge the gap between classic framing and contemporary design.</p>
+<span class="font-display-lg text-[48px] text-white leading-none">100%</span>
+<p class="font-label-caps text-burnished-gold mt-2 uppercase">ACID FREE RANGE</p>
 </div>
 </div>
 </div>
+<div class="relative reveal-item active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
+<div class="aspect-video bg-white/5 p-stack-md border border-white/10">
+<img alt="Details" class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLsJFACM6LdkHMzfsKgTrWjdzHvYyzzze_yhRi6xYbYCiu9J9VvDhlIIBAx7bIa8382TKt2qSdmbrQ5LYJ8PPrgErHReTSk2gRqssGo1PIFM38gcBYdfQAW2h7TxgBbnlAZC4lYhdTgNCH2zqOjoR37FM8sxtx0UiazALob6FfZnzyu_mGKVPlSKZKhkyFH2eZ55KDCdZMeZzQDMyeYYtOtQX3zlKbtgjSNKR0jHYzJm-BI5XO_IhdM_EbKx">
 </div>
-<div class="lg:col-span-6 lg:col-start-7">
-<div class="relative">
-<img class="w-full aspect-[3/4] object-cover shadow-2xl" data-alt="A high-contrast black and white photograph of a framer's hands precisely cutting a mountboard using a traditional bevel cutter. Dust particles caught in a beam of light. Minimalist and atmospheric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjK7BZ_u4EgfmSYuIdzNYOEFEn4J1f0ANjp-h9_rlEStGqGWWCqnnkjRn2kdpRkslR8RBBCbIYezgi62h-z0P7qonA-hWnjTCtqLtUBbR2maACec_l5uGdnr8YJ9fDrguq-qKnrTJ61l5pzEJkzdVaUM9Ez7ikr6FI7T1icH-IvlGsV0h-3o4tJSL0dSrlZc892n5782ep2wTQumQlgmFkgTXW5XievFOS-LbAdHrcohq7Lwfa2d_YgWB-gljAZTriqWFVmVXHJpH"/>
-<!-- Floating geometric element -->
-<div class="absolute -bottom-8 -right-8 w-48 h-48 border border-burnished-gold/30 pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 bg-burnished-gold p-stack-lg hidden md:block">
+<span class="font-headline-md text-black">Certified <br>Suppliers</span>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Bar -->
-<section class="w-full bg-charcoal-black py-stack-lg px-margin-mobile lg:px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-center gap-stack-lg">
-<div class="text-center md:text-left">
-<h3 class="font-headline-md text-headline-md text-antique-parchment">Require a sample pack?</h3>
-<p class="font-body-md text-subtle-grey">Order our comprehensive swatch book to experience textures first-hand.</p>
-</div>
-<a class="inline-flex items-center gap-stack-md text-antique-parchment font-label-caps text-label-caps uppercase group" href="#">
-            Request Swatches
-            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</a>
-</div>
-</section>
-</div>
 <script>
-  // Simple scroll animation for the floating image
-  window.addEventListener('scroll', () => {
-    const scrollPos = window.pageYOffset;
-    const items = document.querySelectorAll('.group-hover\\:scale-105');
-    items.forEach(img => {
-        // Just ensuring smoothness via transition classes in HTML
-    });
-  });
-</script></main><footer class="w-full bg-charcoal-black text-antique-parchment pt-section-gap pb-stack-lg"><div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-section-gap"><div class="flex flex-col gap-stack-md"><h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Products</h3><div class="flex flex-col gap-stack-sm"><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Picture Mouldings</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Mountboards</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Workshop Sundries</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Framing Machinery</a></div></div><div class="flex flex-col gap-stack-md"><h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Company</h3><div class="flex flex-col gap-stack-sm"><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">About Us</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Our History</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Sustainability</a><a class="font-body-md text-on-primary-container hover:text-burnished-gold transition-colors" href="#">Contact</a></div></div><div class="flex flex-col gap-stack-md"><h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Follow Us</h3><div class="flex gap-stack-md items-center"><a class="hover:text-burnished-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a><a class="hover:text-burnished-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a></div></div><div class="flex flex-col gap-stack-md"><h3 class="font-label-caps text-label-caps uppercase text-subtle-grey">Newsletter</h3><p class="font-body-md text-subtle-grey mb-stack-sm">Join our curated mailing list for trade insights.</p><div class="flex border-b border-soft-border pb-2"><input class="bg-transparent border-none focus:outline-none flex-grow font-body-md text-antique-parchment placeholder:text-on-primary-container" placeholder="Email address" type="email"/><button class="font-label-caps text-label-caps uppercase tracking-widest hover:text-burnished-gold transition-colors">Subscribe</button></div></div></div><div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-stack-lg border-t border-soft-border/10 flex flex-col md:flex-row justify-between items-center gap-stack-md"><div class="font-label-caps text-label-caps text-subtle-grey uppercase">© 2024 DJ Simons & Sons. All Rights Reserved.</div><div class="flex gap-stack-lg"><a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Terms</a><a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Privacy</a><a class="font-label-caps text-label-caps text-subtle-grey hover:text-antique-parchment uppercase" href="#">Cookies</a></div></div></footer></body></html>
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-item').forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+          observer.observe(el);
+        });
+
+        // Handle the "active" state in CSS
+        const style = document.createElement('style');
+        style.innerHTML = `
+          .reveal-item.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+            animation: fade-in 1.2s ease-out forwards;
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          const parallax = document.getElementById('hero-parallax');
+          if(parallax) {
+            parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
+          }
+        });
+      </script>
+</div>
+</main>
+<footer class="w-full bg-black py-section-gap mt-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-stack-lg">
+<div class="col-span-2">
+<h3 class="font-headline-md text-headline-md text-white mb-stack-md">DJ SIMONS</h3>
+<p class="font-body-md text-body-md text-white/60 max-w-sm">Purveyors of fine picture framing materials since 1970. Excellence in craftsmanship, legacy in supply.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-caps text-label-caps text-burnished-gold mb-2 uppercase">COLLECTIONS</span>
+<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="mouldings.html">Mouldings</a>
+<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="#">Chop Service</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-caps text-label-caps text-burnished-gold mb-2 uppercase">SUPPORT</span>
+<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="#">Delivery</a>
+<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="#">Contact</a>
+</div>
+</div>
+<div class="border-t border-white/10 pt-stack-md flex justify-between items-center text-white/40 font-label-caps text-label-caps uppercase">
+<span class="">© 2024 DJ SIMONS &amp; SONS LTD.</span>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined">terminal</span>
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>
