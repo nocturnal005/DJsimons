@@ -1,7 +1,9 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Technical Data — DJ Simons</title>
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Data &amp; Standards — DJ Simons &amp; Sons</title>
 <style>
     @layer base {
       html, body {
@@ -21,14 +23,62 @@
     ::-webkit-scrollbar {
       display: none;
     }
+    
+    /* Editorial Motion System */
     .scroll-reveal {
       opacity: 0;
-      transform: translateY(2rem);
-      transition: all 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(3rem);
+      transition: opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
     }
     .scroll-reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+    
+    /* Sequential delays for children of a visible scroll-reveal container */
+    .stagger-reveal > * {
+      opacity: 0;
+      transform: translateY(1.5rem);
+      transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .visible .stagger-reveal > *:nth-child(1) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+    .visible .stagger-reveal > *:nth-child(2) { transition-delay: 250ms; opacity: 1; transform: translateY(0); }
+    .visible .stagger-reveal > *:nth-child(3) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+    .visible .stagger-reveal > *:nth-child(4) { transition-delay: 550ms; opacity: 1; transform: translateY(0); }
+
+    /* Special Table Row Entrance */
+    .matrix-row {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 800ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .visible .matrix-row {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    /* Icon sequences */
+    .matrix-icon {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .visible .matrix-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .asymmetric-grid > div:nth-child(even) {
+      margin-top: 64px;
+    }
+
+    /* Heritage Transitions */
+    .hover-lift {
+      transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), border-color 600ms cubic-bezier(0.16, 1, 0.3, 1), background-color 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
     }
   </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -130,42 +180,28 @@
       }
     }
   </script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;icon_names=person,search" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-<style>
-  @media (prefers-reduced-motion: reduce) {
-    .scroll-reveal {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-    .group:hover, .hover\:scale-105:hover {
-      transform: none !important;
-    }
-  }
-  .scroll-reveal {
-    will-change: transform, opacity;
-  }
-</style></head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;icon_names=person,search,check,close" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+</head>
 <body class="bg-surface font-body-md text-on-surface">
 <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-soft-border/30">
 <div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
 <div class="flex items-center gap-12">
-<a class="font-headline-lg text-headline-lg tracking-tight text-charcoal-black cursor-pointer" href="index.html">DJ SIMONS</a>
-<nav class="hidden lg:flex items-center gap-8" data-active-classes="text-burnished-gold">
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" data-path="mouldings" href="mouldings.html">Mouldings</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" data-path="boards" href="boards.html">Boards</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" data-path="sundries" href="#">Sundries</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" data-path="machinery" href="machinery.html">Machinery</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" data-path="chop-service" href="chop-service.html">Chop Service</a>
-<a aria-current="page" class="font-nav-link transition-colors uppercase text-burnished-gold" data-path="technical-data" href="technical-data.html">Technical Data</a>
+<a class="font-headline-lg text-headline-lg text-charcoal-black cursor-pointer tracking-tight" href="index.html">DJ SIMONS</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="mouldings.html">Mouldings</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="boards.html">Boards</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="#">Sundries</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="machinery.html">Machinery</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="chop-service.html">Chop Service</a>
+<a aria-current="page" class="font-nav-link transition-colors uppercase text-burnished-gold" href="technical-data.html">Technical Data</a>
 </nav>
 </div>
 <div class="flex items-center gap-6">
 <button class="text-on-surface-variant hover:text-charcoal-black transition-colors">
 <span class="material-symbols-outlined">search</span>
 </button>
-<div class="w-8 h-8 rounded-full bg-charcoal-black flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+<div class="w-8 h-8 rounded-full bg-charcoal-black flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-500">
 <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
 </div>
 </div>
@@ -174,221 +210,199 @@
 <main class="w-full pt-20 bg-surface">
 <div class="flex flex-col w-full">
 <!-- Hero Section -->
-<section class="relative w-full h-[85vh] flex items-center overflow-hidden -mt-20">
-<div class="absolute inset-0 bg-charcoal-black/20 z-10"></div>
-<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-[4000ms] scale-105 hover:scale-100 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2khRONiiVTU8eVdu5KRTy8Bu74GGwX9TfzsQpqrqnyd-QJNe1Jfu5XE9m_LJOi5e4IIqtikJdMbAaPH4Cgg4lmhHGfZml16LKKZhve9Scn3S9EFqJtg70ngE4_sTivXBaYGAQBH4bXQyTYOi-W9pH7q2LTgmAV128rEiU6g0ewRXNkueAVLw_5WO_rK1sz3wylxnUOgadDzNh1zQGVjqxtK6A6gZooubabUU2SiD6e4q1mAidrMZDqdAywA0nR_XWzZNMhPuUGa9E')">
-</div>
-<div class="relative z-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop w-full pt-20">
-<div class="max-w-4xl scroll-reveal visible">
-<span class="font-label-caps text-label-caps text-antique-parchment uppercase tracking-widest mb-stack-md block" style="color: #D4AF37; transition-delay: 100ms;">Industry Benchmarks</span>
-<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-charcoal-black mb-stack-lg leading-tight" style="transition-delay: 300ms;">Technical Excellence</h1>
-<p class="font-headline-md text-headline-md text-charcoal-black max-w-2xl" style="transition-delay: 500ms;">The definitive standards for fine art preservation, established in accordance with the Fine Art Trade Guild.</p>
+<section class="relative w-full min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute right-0 top-0 w-full lg:w-3/5 h-full z-0">
+<div class="w-full h-full bg-cover bg-center grayscale-[20%] transition-transform duration-[6000ms] scale-110 hover:scale-100 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLv8EG0aAc3e9h0RYtE0Pi2gdZ9WwTrUvMN0dkeKQh5k69M9FubrRLhDUPbrnPzb6xGSd6fnePHCJkCSVQ7KNXh8_Rh8LjVQfj5yJcf_fFc23N1luVDfIpaG5l13LifNxl17E7--TvSd5wFRXvvdD_zeduOSvnSamUQ_hCIIwfHAUDtKeU81gNtpIf7Gtl_9SFT3Jj-Ko1YLd1tH0sIATl87fzblKn45CptqNR8cH05Lfqs2jHNpicWhOaWw')">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent"></div>
 </div>
 </div>
-<!-- Decorative vertical line -->
-<div class="absolute bottom-0 left-margin-desktop w-px h-32 bg-gradient-to-t from-white to-transparent hidden lg:block z-20"></div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop w-full scroll-reveal">
+<div class="max-w-2xl bg-surface/90 lg:bg-transparent p-8 lg:p-0 backdrop-blur-sm lg:backdrop-blur-none stagger-reveal">
+<span class="font-label-caps text-label-caps text-burnished-gold uppercase tracking-widest mb-stack-md block">Industry Benchmarks</span>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-charcoal-black mb-stack-lg leading-tight">Technical Excellence</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant max-w-xl">The definitive standards for fine art preservation, established in accordance with the Fine Art Trade Guild.</p>
+<div class="mt-12 h-px w-24 bg-burnished-gold origin-left transition-transform duration-1000 delay-700"></div>
+</div>
+</div>
 </section>
-<!-- Standards Breakdown -->
-<section class="py-section-gap max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<!-- The Five Levels of Framing -->
+<section class="py-section-gap max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop scroll-reveal">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start mb-24">
-<div class="lg:col-span-5 scroll-reveal visible">
+<div class="lg:col-span-4 sticky top-32">
 <h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-stack-lg italic">The Five Levels of Framing</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
               To ensure the longevity of artwork, we categorize our mountboards into five distinct technical tiers. These levels define the protection and archival stability offered by each material choice.
             </p>
 </div>
-<div class="lg:col-span-6 lg:col-start-7 pt-12">
-<div class="flex flex-col space-y-16">
+<div class="lg:col-span-7 lg:col-start-6 space-y-32 pt-12">
 <!-- Level 01 -->
-<div class="group flex gap-8 scroll-reveal visible" style="transition-delay: 100ms;">
-<span class="font-display-lg text-headline-lg text-burnished-gold/30 group-hover:text-burnished-gold transition-colors duration-500">01</span>
-<div>
-<h3 class="font-headline-md text-headline-md text-charcoal-black mb-2 uppercase tracking-tight">Museum Level</h3>
+<div class="group flex flex-col md:flex-row gap-8 ml-0 lg:ml-12 hover-lift">
+<span class="font-display-lg text-headline-lg text-burnished-gold/20 group-hover:text-burnished-gold transition-colors duration-1000">01</span>
+<div class="bg-surface-container-low p-10 border-l-4 border-burnished-gold shadow-sm hover:border-charcoal-black transition-colors duration-700">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-4 uppercase tracking-tight">Museum Level</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">For high-value artwork. Uses 100% cotton fiber, providing 500+ years of archival stability. Entirely acid-free and lignin-free.</p>
 </div>
 </div>
 <!-- Level 02 -->
-<div class="group flex gap-8 scroll-reveal visible" style="transition-delay: 200ms;">
-<span class="font-display-lg text-headline-lg text-burnished-gold/30 group-hover:text-burnished-gold transition-colors duration-500">02</span>
-<div>
-<h3 class="font-headline-md text-headline-md text-charcoal-black mb-2 uppercase tracking-tight">Conservation Level</h3>
+<div class="group flex flex-col md:flex-row gap-8 mr-0 lg:mr-12 hover-lift">
+<span class="font-display-lg text-headline-lg text-burnished-gold/20 group-hover:text-burnished-gold transition-colors duration-1000">02</span>
+<div class="bg-surface-container-high p-10 border-r-4 border-charcoal-black shadow-sm hover:border-burnished-gold transition-colors duration-700">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-4 uppercase tracking-tight">Conservation Level</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Chemically purified wood pulp. Meets the strictest standards for collectable art. Archival for approximately 20 years in normal conditions.</p>
 </div>
 </div>
 <!-- Level 03 -->
-<div class="group flex gap-8 scroll-reveal visible" style="transition-delay: 300ms;">
-<span class="font-display-lg text-headline-lg text-burnished-gold/30 group-hover:text-burnished-gold transition-colors duration-500">03</span>
-<div>
-<h3 class="font-headline-md text-headline-md text-charcoal-black mb-2 uppercase tracking-tight">Commended Level</h3>
+<div class="group flex flex-col md:flex-row gap-8 mx-0 lg:mx-6 hover-lift">
+<span class="font-display-lg text-headline-lg text-burnished-gold/20 group-hover:text-burnished-gold transition-colors duration-1000">03</span>
+<div class="bg-surface-container-low p-10 border-t-4 border-burnished-gold shadow-sm hover:border-charcoal-black transition-colors duration-700">
+<h3 class="font-headline-md text-headline-md text-charcoal-black mb-4 uppercase tracking-tight">Commended Level</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Ideal for replaceable art. White core ensures a clean bevel edge that will not yellow over time.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
 </section>
-<!-- Visual Comparison Matrix -->
-<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<!-- Material Comparison -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden scroll-reveal">
 <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
-<div class="flex flex-col lg:flex-row justify-between items-end mb-stack-lg gap-gutter scroll-reveal visible">
-<h2 class="font-display-lg text-headline-lg text-charcoal-black max-w-md">Material Comparison Range</h2>
-<div class="h-px flex-1 bg-soft-border/50 mx-8 mb-4 hidden lg:block"></div>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest pb-4">Visual Audit 2024</p>
+<div class="flex flex-col lg:flex-row justify-between items-baseline mb-24 gap-gutter">
+<h2 class="font-display-lg text-display-lg-mobile lg:text-headline-lg text-charcoal-black italic max-w-xl">Material Comparison Range</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border-b border-burnished-gold pb-2">Visual Audit 2024</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-y-32 asymmetric-grid stagger-reveal">
 <!-- Range 01 -->
-<div class="relative group cursor-pointer scroll-reveal visible hover:shadow-xl">
-<div class="aspect-square overflow-hidden bg-surface-container mb-stack-md">
-<img alt="Cotton Museum Board" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBGVVP4xJJ8-xgNw400hqvYiARKlXP7XqQIeeznPyevY7dKESLqaUJN6mDqaxdshBbG_YsjnjuG4kUbpbc7zDHNl3VNwQgP9D12KExDPeAVKADkxfX1jpUm843rE0553s63a8nltM5lhyBZ5YLdRhLSG_dOcmhp3_lDmTWBIFY2aZSygs4EAg9ZAzHRtO9DFcn6qKgVpFmaayAGkvYVUhpmuH1H_vAouLQ_XWxDEvqjr7XMnguQBHZ-Fie6-dcPtTntka6rTuofdVl">
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-500"></div>
+<div class="lg:col-span-5 hover-lift">
+<div class="relative group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container mb-stack-md">
+<img alt="Cotton Museum Board" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLuIQx_LSuuZx1hlqRm-CbA-gg3qKPBu_ZSIN0QVjrwOfYu7IAFNnYjMhGuEdDFCvOBPtVKo-58AwaI9Iku59_ldJZiQB7NZT3h_PFdcLThoU0a7XEBWAKegYu1-JG2FQna4wWyynsseLLBoiUd02-Irkldj1Wk0FxZLsf63MR0iZLFAMdZwaHXC2-KpjR7rc9WjdO1uFytTvQH5OKHDRbu8j90LxUtRANxpMcBwlHbKI2a1NkSh9AWXWEZy"/>
 </div>
-<div class="flex flex-col">
+<div class="pl-4 border-l border-burnished-gold group-hover:border-charcoal-black transition-colors duration-500">
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1">PREMIUM ARCHIVAL</span>
-<h4 class="font-headline-md text-[24px] text-charcoal-black group-hover:text-burnished-gold transition-colors">Cotton Museum</h4>
-<p class="font-body-md text-on-surface-variant mt-2">100% Pure Cotton Fibers. The gold standard for galleries.</p>
+<h4 class="font-headline-md text-[28px] text-charcoal-black">Cotton Museum</h4>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-sm">100% Pure Cotton Fibers. The gold standard for galleries.</p>
+</div>
 </div>
 </div>
 <!-- Range 02 -->
-<div class="relative group cursor-pointer scroll-reveal visible hover:shadow-xl" style="transition-delay: 100ms;">
+<div class="lg:col-span-4 lg:col-start-8 hover-lift">
+<div class="relative group cursor-pointer">
 <div class="aspect-square overflow-hidden bg-surface-container mb-stack-md">
-<img alt="Conservation White Core" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMMt0Vlzjc2r6hmzn2SRJhDKA_XXTnnO_0WcVPdWKY-nIyMrchCvv97WiOZKH4h5B0GBcg2TgtO_C15jY4Rn7SQB840eeRrwJ2qf4HudO1h6VJarDMYxk_db68DSmO_9YByEX09fvJw91uby2NjMERq22BECF44QAc9gI634x-HBIpzkx99OIZI2fYVu2joTpTARKJZA8nACg1tWsuLvAnasHR3QSovUj8ijzrZrHArmlyhHWEZgnkUTDBA1i6E1_Usc7Va5uGwIGk">
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-500"></div>
+<img alt="Conservation White Core" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLtFdj2VCzXWrDaVh1WSUHpQnN3hZQgomqi7goZ9n4_n4BVQEDhv07XBjpk7KshJDfAQDFfIYTyYsdCs1lFo0Y73Bcvn2sFj-n3l7avkMTO8Tt2Z48Ixkh3vFT7hWnBo3zHLeX63i1fCXx_c16xAgVRZbeUsW8-HQMKH6QStN06QnLHGMuacToCrYLi9SMYnT2BWbmm0fvKjhgI8KfcS9pMTnfuiUo7yPIt3pwIEcSrLmQ14dbRQkeh--gM"/>
 </div>
-<div class="flex flex-col">
+<div class="pl-4">
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1">CONSERVATION GRADE</span>
-<h4 class="font-headline-md text-[24px] text-charcoal-black group-hover:text-burnished-gold transition-colors">Cons. White Core</h4>
+<h4 class="font-headline-md text-[24px] text-charcoal-black">Cons. White Core</h4>
 <p class="font-body-md text-on-surface-variant mt-2">Alpha-Cellulose. Acid-free throughout with stay-white bevels.</p>
 </div>
 </div>
-<!-- Range 03 -->
-<div class="relative group cursor-pointer scroll-reveal visible hover:shadow-xl" style="transition-delay: 200ms;">
-<div class="aspect-square overflow-hidden bg-surface-container mb-stack-md">
-<img alt="Standard White Core" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN6DSjAvxxSqTQ6iq65gq0S75M-pjDAFTmundkgGloqPrmwanQcWprfy-Y7gHFZ-G3rwEdLjiwuhc8T6uq0s8JiXfwDihWyEeOOVz93QBPCdQURFWtBHTuuoAEN-_dPju5sacMv0NQhi96ngmp0Ao8SDPnv8bh-p_MQq0fTczXpTMDlWmOGDILKAe9NFDQU0Hao54LSfips5UAAMu3A8NRTIWwZ8o9dRMw29eOQf3ntIRCsCwlNkSODFTLQ7Gb24h9x6nEonYe1zeZ">
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-500"></div>
 </div>
-<div class="flex flex-col">
+<!-- Range 03 -->
+<div class="lg:col-span-4 lg:col-start-2 hover-lift">
+<div class="relative group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container mb-stack-md">
+<img alt="Standard White Core" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLt2LzHvnHK6A9GZwGB1r4n76vXZzm4uRHGyWH_vazsDPSlUpEqNS0-5jVVPLOLpRveGGBfJZizuDZK58QKYaJ0kGF6utgJidojE9e4pLe9YhwwWxFQL24kPSMOgX5PCtLgW6ric623aCt6CI5RJ1oJ1FCW6SoF_Z6BoCS_iPq7h04gWGkWg61mnGP1eatHvbdHNmS_YPSg_vujc4lTIGV_18s99Lwzikw7lXnPJeExE5sLvoYOCiwDelr4"/>
+</div>
+<div class="pl-4">
 <span class="font-label-caps text-label-caps text-on-surface-variant mb-1">TRADE STANDARD</span>
-<h4 class="font-headline-md text-[24px] text-charcoal-black group-hover:text-burnished-gold transition-colors">Standard White Core</h4>
+<h4 class="font-headline-md text-[24px] text-charcoal-black">Standard White Core</h4>
 <p class="font-body-md text-on-surface-variant mt-2">Versatile framing for commercial photography and prints.</p>
 </div>
 </div>
-<!-- Range 04 -->
-<div class="relative group cursor-pointer scroll-reveal visible hover:shadow-xl" style="transition-delay: 300ms;">
-<div class="aspect-square overflow-hidden bg-surface-container mb-stack-md">
-<img alt="Standard Cream Core" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnPR2Dr9Dps9vACSU3Tz2L2ksEk7fjzhvfKMSYp9jVaRnPiRr7a0T5X0BN2p1RF3PbfKlfDxtLi2CCb10JRm9EdLEOi5_TpdF7iN7imLb8RQOVYj_ZmVkdXMcwkbQVvEJGaJmxcqKAqbT8XZwinGV_hUThXUAplvpKOauH_-mD__28n96oH42CYgJVVCdW08m8UqKqEPu7Lu8yPj5uvwmvSOZDWfC40hu4TbUFrLGVG0GFWJauHVpANciuuJV4kS4YZJXk1fc-yO1_">
-<div class="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/5 transition-colors duration-500"></div>
 </div>
-<div class="flex flex-col">
+<!-- Range 04 -->
+<div class="lg:col-span-6 lg:col-start-7 hover-lift">
+<div class="relative group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container mb-stack-md">
+<img alt="Standard Cream Core" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsI3jfXgz26VZaYGqdDYlIUF_Q9uZfwvSrmYUDG4NTmRZln90CPryFjSnxTbR1T2rZ6XS3k2VhjncqhHm39n8pr9G17xzRWUgdGqd1S9-DMlXyHXD6LMPR81K-WIrtKAdraFIUOy-xHwvv3XGF5LnKpCPf0HSYj7EYh-pakQzU3QAopIElQfQI_vHJ9zxdatErjs2rDpxEGnfBAKnlBkWtvaPV4FjPJI2jMmm0cfQX3a2rvChDf_24muBcr"/>
+</div>
+<div class="pl-4 border-l border-charcoal-black group-hover:border-burnished-gold transition-colors duration-500">
 <span class="font-label-caps text-label-caps text-on-surface-variant mb-1">VALUE RANGE</span>
-<h4 class="font-headline-md text-[24px] text-charcoal-black group-hover:text-burnished-gold transition-colors">Cream Core</h4>
+<h4 class="font-headline-md text-[28px] text-charcoal-black">Cream Core</h4>
 <p class="font-body-md text-on-surface-variant mt-2">Classic traditional aesthetic for non-archival framing needs.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<!-- Interactive Technical Matrix -->
-<section class="py-section-gap max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
-<div class="mb-stack-lg scroll-reveal visible">
-<h3 class="font-headline-lg text-headline-lg text-charcoal-black italic mb-4">Technical Matrix</h3>
-<p class="font-body-lg text-on-surface-variant max-w-xl">A cross-reference guide for the Fine Art Trade Guild requirements.</p>
 </div>
-<div class="w-full overflow-x-auto scroll-reveal visible">
+</section>
+<!-- Technical Matrix -->
+<section class="py-section-gap bg-charcoal-black text-white scroll-reveal">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-4 stagger-reveal">
+<h3 class="font-headline-lg text-headline-lg text-antique-parchment italic mb-6">Technical Matrix</h3>
+<p class="font-body-lg text-antique-parchment/60 mb-8">A cross-reference guide for the Fine Art Trade Guild requirements, detailing the granular specifications of our archival ranges.</p>
+<div class="hidden lg:block h-64 border-l border-antique-parchment/20 ml-2"></div>
+</div>
+<div class="lg:col-span-8">
+<div class="w-full overflow-x-auto bg-surface-container-highest/5 p-8 lg:p-12 backdrop-blur-sm border border-antique-parchment/10">
 <table class="w-full border-collapse">
 <thead>
-<tr class="border-b-2 border-charcoal-black text-left">
-<th class="py-6 font-label-caps text-label-caps uppercase text-charcoal-black pr-gutter">Requirement</th>
-<th class="py-6 font-label-caps text-label-caps uppercase text-charcoal-black px-4">Museum</th>
-<th class="py-6 font-label-caps text-label-caps uppercase text-charcoal-black px-4">Conser.</th>
-<th class="py-6 font-label-caps text-label-caps uppercase text-charcoal-black px-4">Commend.</th>
-<th class="py-6 font-label-caps text-label-caps uppercase text-charcoal-black px-4">Budget</th>
+<tr class="border-b border-antique-parchment/30 text-left">
+<th class="py-6 font-label-caps text-label-caps uppercase text-antique-parchment pr-8">Requirement</th>
+<th class="py-6 font-label-caps text-label-caps uppercase text-antique-parchment px-4">Museum</th>
+<th class="py-6 font-label-caps text-label-caps uppercase text-antique-parchment px-4">Conser.</th>
+<th class="py-6 font-label-caps text-label-caps uppercase text-antique-parchment px-4">Commend.</th>
+<th class="py-6 font-label-caps text-label-caps uppercase text-antique-parchment px-4">Budget</th>
 </tr>
 </thead>
-<tbody class="font-body-md">
-<tr class="border-b border-soft-border/40 hover:bg-surface-container-low transition-colors group">
-<td class="py-6 pr-gutter text-charcoal-black font-medium">Lignin-Free Core</td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold scale-0 transition-transform duration-500 group-hover:scale-100 visible-icon">check</span><span class="material-symbols-outlined text-burnished-gold icon-static">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold icon-static">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey icon-static">close</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey icon-static">close</span></td>
+<tbody class="font-body-md text-antique-parchment/90">
+<tr class="border-b border-antique-parchment/10 hover:bg-white/5 transition-colors matrix-row" style="transition-delay: 100ms;">
+<td class="py-6 pr-8 font-medium">Lignin-Free Core</td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 600ms;">check</span></td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 650ms;">check</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 700ms;">close</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 750ms;">close</span></td>
 </tr>
-<tr class="border-b border-soft-border/40 hover:bg-surface-container-low transition-colors">
-<td class="py-6 pr-gutter text-charcoal-black font-medium">100% Cotton Content</td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey">close</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey">close</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey">close</span></td>
+<tr class="border-b border-antique-parchment/10 hover:bg-white/5 transition-colors matrix-row" style="transition-delay: 200ms;">
+<td class="py-6 pr-8 font-medium">100% Cotton Content</td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 800ms;">check</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 850ms;">close</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 900ms;">close</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 950ms;">close</span></td>
 </tr>
-<tr class="border-b border-soft-border/40 hover:bg-surface-container-low transition-colors">
-<td class="py-6 pr-gutter text-charcoal-black font-medium">Alkaline Reserve (Buffered)</td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey">close</span></td>
+<tr class="border-b border-antique-parchment/10 hover:bg-white/5 transition-colors matrix-row" style="transition-delay: 300ms;">
+<td class="py-6 pr-8 font-medium">Alkaline Reserve</td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1000ms;">check</span></td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1050ms;">check</span></td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1100ms;">check</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1150ms;">close</span></td>
 </tr>
-<tr class="border-b border-soft-border/40 hover:bg-surface-container-low transition-colors">
-<td class="py-6 pr-gutter text-charcoal-black font-medium">PH Value Range (7.5-9.5)</td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-burnished-gold">check</span></td>
-<td class="py-6 px-4"><span class="material-symbols-outlined text-subtle-grey">close</span></td>
+<tr class="hover:bg-white/5 transition-colors matrix-row" style="transition-delay: 400ms;">
+<td class="py-6 pr-8 font-medium">PH Value Range</td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1200ms;">check</span></td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1250ms;">check</span></td>
+<td class="py-6 px-4 text-burnished-gold"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1300ms;">check</span></td>
+<td class="py-6 px-4 text-subtle-grey"><span class="material-symbols-outlined matrix-icon" style="transition-delay: 1350ms;">close</span></td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+</div>
+</div>
 </section>
 <!-- CTA Section -->
-<section class="mb-section-gap max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
-<div class="bg-charcoal-black p-12 lg:p-24 flex flex-col lg:flex-row items-center justify-between gap-gutter scroll-reveal overflow-hidden relative group visible">
-<div class="absolute inset-0 bg-white/5 translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-in-out pointer-events-none"></div>
-<div class="relative z-10 max-w-xl text-center lg:text-left">
-<h2 class="font-headline-lg text-headline-lg text-antique-parchment mb-4 italic">Need more specific data?</h2>
-<p class="font-body-lg text-antique-parchment/70">Download our complete technical spec sheets for every mountboard range we stock.</p>
+<section class="mb-section-gap max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop scroll-reveal">
+<div class="bg-surface-container-low p-12 lg:p-24 flex flex-col lg:flex-row items-center justify-between gap-gutter relative overflow-hidden group border border-soft-border/50">
+<div class="absolute top-0 right-0 w-64 h-64 bg-burnished-gold/5 rounded-full -mr-32 -mt-32 transition-transform duration-[2000ms] group-hover:scale-150 ease-out"></div>
+<div class="relative z-10 max-w-xl text-center lg:text-left stagger-reveal">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-black mb-4 italic">Need more specific data?</h2>
+<p class="font-body-lg text-on-surface-variant">Download our complete technical spec sheets for every mountboard range we stock.</p>
 </div>
-<div class="relative z-10 flex flex-col sm:flex-row gap-4">
-<button class="bg-burnished-gold text-charcoal-black px-10 py-4 font-label-caps text-label-caps uppercase hover:bg-antique-parchment hover:scale-105 transition-all duration-300">
+<div class="relative z-10 flex flex-col sm:flex-row gap-6 stagger-reveal">
+<button class="bg-charcoal-black text-antique-parchment px-10 py-4 font-label-caps text-label-caps uppercase hover:bg-burnished-gold hover:text-charcoal-black transition-all duration-700">
               Download Full Specs
             </button>
-<button class="border border-antique-parchment/30 text-antique-parchment px-10 py-4 font-label-caps text-label-caps uppercase hover:border-antique-parchment hover:bg-white/5 transition-all duration-300">
+<button class="border border-charcoal-black/20 text-charcoal-black px-10 py-4 font-label-caps text-label-caps uppercase hover:bg-charcoal-black hover:text-white transition-all duration-700">
               Request Samples
             </button>
 </div>
 </div>
 </section>
 </div>
-<script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-          threshold: 0.15,
-          rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-          observer.observe(el);
-        });
-
-        // Smooth header blur transition on scroll
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 50) {
-            header.classList.add('bg-surface/95');
-          } else {
-            header.classList.remove('bg-surface/95');
-          }
-        });
-      });
-    </script>
 </main>
-<footer class="w-full bg-surface-container-low mt-section-gap border-t border-soft-border/20">
+<footer class="w-full bg-surface-container-low border-t border-soft-border/20">
 <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-section-gap">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-4">
@@ -398,22 +412,22 @@
 <div class="md:col-span-2">
 <h4 class="font-label-caps text-label-caps text-charcoal-black mb-stack-md uppercase">Navigation</h4>
 <ul class="space-y-3">
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors"><a href="technical-data.html">Technical Data</a></li>
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Stockists</li>
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">History</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Technical Data</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Stockists</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">History</li>
 </ul>
 </div>
 <div class="md:col-span-2">
 <h4 class="font-label-caps text-label-caps text-charcoal-black mb-stack-md uppercase">Legal</h4>
 <ul class="space-y-3">
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Privacy Policy</li>
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Terms of Sale</li>
-<li class="font-body-md text-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Cookie Policy</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Privacy Policy</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Terms of Sale</li>
+<li class="font-body-md text-on-surface-variant hover:text-charcoal-black cursor-pointer transition-colors">Cookie Policy</li>
 </ul>
 </div>
 <div class="md:col-span-4">
 <h4 class="font-label-caps text-label-caps text-charcoal-black mb-stack-md uppercase">The Dispatch</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Subscribe for seasonal collection releases and trade insights.</p>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Subscribe for seasonal collection releases and trade insights.</p>
 <div class="flex border-b border-charcoal-black py-2 group focus-within:border-burnished-gold transition-colors">
 <input class="bg-transparent w-full focus:outline-none font-body-md text-on-surface border-none p-0 focus:ring-0" placeholder="Email address" type="email"/>
 <button class="font-label-caps text-label-caps uppercase text-charcoal-black hover:text-burnished-gold transition-colors">Join</button>
@@ -421,7 +435,7 @@
 </div>
 </div>
 <div class="mt-stack-lg pt-stack-lg border-t border-soft-border/20 flex flex-col md:flex-row justify-between gap-4 text-on-surface-variant font-label-caps text-label-caps uppercase">
-<span class="">© 2024 D.J. Simons &amp; Sons Ltd.</span>
+<span>© 2024 D.J. Simons &amp; Sons Ltd.</span>
 <div class="flex gap-6">
 <a class="hover:text-charcoal-black transition-colors" href="#">Instagram</a>
 <a class="hover:text-charcoal-black transition-colors" href="#">LinkedIn</a>
@@ -430,4 +444,41 @@
 </div>
 </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Adding a small scale effect to the line in hero if it's the hero reveal
+            if(entry.target.querySelector('.origin-left')) {
+               entry.target.querySelector('.origin-left').style.transform = 'scaleX(1)';
+            } else {
+               const line = entry.target.querySelector('.origin-left');
+               if(line) line.style.transform = 'scaleX(0)';
+            }
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Interactive Header
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('bg-surface/95', 'shadow-sm');
+        } else {
+          header.classList.remove('bg-surface/95', 'shadow-sm');
+        }
+      });
+    });
+  </script>
 </body></html>
