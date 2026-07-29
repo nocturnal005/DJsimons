@@ -111,12 +111,12 @@
     </script>
 <!-- responsive-adaptations -->
 <style>
-  /* Scroll-reveal parks elements 40px off-axis until they animate in, which
-     pushes them past the gutter on narrow screens. Clip the axis rather than
-     weaken the animation. */
-  html, body { max-width: 100%; overflow-x: hidden; }
-
   @media (max-width: 1023px) {
+    /* Scroll-reveal parks content 40px off-axis until it animates in, which
+       pushed chop-service 20px past the gutter. Fix the displacement itself:
+       overflow-x:hidden on html/body clips it but breaks touch scrolling. */
+    body .reveal-left, body .reveal-right { transform: translateY(24px); }
+
     /* 120px of section padding is most of a phone screen. */
     body .py-section-gap { padding-top: 4rem; padding-bottom: 4rem; }
     body .pt-section-gap { padding-top: 4rem; }
@@ -128,10 +128,6 @@
     /* Desktop gutters inside an already-narrow viewport. */
     body .lg\:px-margin-desktop { padding-left: 1.25rem; padding-right: 1.25rem; }
     body .p-margin-desktop { padding: 1.5rem; }
-
-    /* Full-bleed hero art gets unreadable when the viewport is taller than
-       it is wide; cap it so copy below stays reachable. */
-    body .h-screen { height: auto; min-height: 78vh; }
   }
 
   @media (max-width: 640px) {
