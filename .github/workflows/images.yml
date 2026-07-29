@@ -1,0 +1,23 @@
+name: images
+
+# The local pre-commit hook only protects the clone that enabled it. This is
+# the backstop: it runs on whatever actually reaches GitHub, from any machine.
+# A commit that reintroduced expiring Stitch URLs has landed here before.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: No remote or dangling image references
+        run: python tools/check_images.py

@@ -58,3 +58,35 @@ python tools/localize_images.py path/to/exported.html
 
 That downloads every image into `assets/img/` and rewrites the references to
 relative paths.
+
+## Enforcement
+
+The rule above is not left to memory — `tools/check_images.py` enforces it at
+two points, and fails on either thing that has actually broken this site:
+
+- a remote image reference (it can expire)
+- a local reference pointing at a missing file (equally broken, and invisible
+  to any check that only greps for `http`)
+
+Only tracked HTML is inspected, so local scratch files are ignored.
+`redesign_html/` and the other raw export folders are exempt: they are archived
+records of what Stitch delivered, and rewriting them would destroy their value.
+
+**Locally**, via a pre-commit hook. Enable it once per clone:
+
+```bash
+git config core.hooksPath tools/hooks
+```
+
+**On GitHub**, via `.github/workflows/images.yml`, which runs on every push to
+`main` and every pull request. This is the part that matters: a hook only
+protects the clone that enabled it, and a commit reintroducing expiring URLs
+has already reached this repository once from elsewhere.
+
+To see it work, reintroduce a pre-fix page and run the checker:
+
+```bash
+git show a8c2552:boards.html > boards.html && python tools/check_images.py
+```
+
+It reports all 18 offending lines. Restore with `git checkout -- boards.html`.

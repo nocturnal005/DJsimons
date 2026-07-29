@@ -1,0 +1,19 @@
+#!/bin/sh
+# Block commits that would ship a broken or expiring image.
+#
+# Enable (once per clone):
+#     git config core.hooksPath tools/hooks
+#
+# Bypass in an emergency with --no-verify, but understand what you are doing:
+# the images will break silently, weeks later, with no error in any log.
+
+if ! command -v python >/dev/null 2>&1; then
+    echo "pre-commit: python not found, skipping image check" >&2
+    exit 0
+fi
+
+python "$(git rev-parse --show-toplevel)/tools/check_images.py" || {
+    echo ""
+    echo "pre-commit: commit blocked - see above."
+    exit 1
+}
