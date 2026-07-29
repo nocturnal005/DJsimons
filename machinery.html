@@ -115,6 +115,36 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<!-- responsive-adaptations -->
+<style>
+  /* Scroll-reveal parks elements 40px off-axis until they animate in, which
+     pushes them past the gutter on narrow screens. Clip the axis rather than
+     weaken the animation. */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  @media (max-width: 1023px) {
+    /* 120px of section padding is most of a phone screen. */
+    body .py-section-gap { padding-top: 4rem; padding-bottom: 4rem; }
+    body .pt-section-gap { padding-top: 4rem; }
+    body .pb-section-gap { padding-bottom: 4rem; }
+    body .mt-section-gap { margin-top: 4rem; }
+    body .mb-section-gap { margin-bottom: 4rem; }
+    body .gap-section-gap { gap: 4rem; }
+
+    /* Desktop gutters inside an already-narrow viewport. */
+    body .lg\:px-margin-desktop { padding-left: 1.25rem; padding-right: 1.25rem; }
+    body .p-margin-desktop { padding: 1.5rem; }
+
+    /* Full-bleed hero art gets unreadable when the viewport is taller than
+       it is wide; cap it so copy below stays reachable. */
+    body .h-screen { height: auto; min-height: 78vh; }
+  }
+
+  @media (max-width: 640px) {
+    body .py-section-gap { padding-top: 3rem; padding-bottom: 3rem; }
+    body .mt-section-gap { margin-top: 3rem; }
+  }
+</style>
 </head>
 <body class="bg-background font-body-md text-on-background">
     <header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">

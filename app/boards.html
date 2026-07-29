@@ -136,7 +136,37 @@
           .animate-fade-in {
             animation: fade-in 1.2s ease-out forwards;
           }
-        </style></head>
+        </style><!-- responsive-adaptations -->
+<style>
+  /* Scroll-reveal parks elements 40px off-axis until they animate in, which
+     pushes them past the gutter on narrow screens. Clip the axis rather than
+     weaken the animation. */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  @media (max-width: 1023px) {
+    /* 120px of section padding is most of a phone screen. */
+    body .py-section-gap { padding-top: 4rem; padding-bottom: 4rem; }
+    body .pt-section-gap { padding-top: 4rem; }
+    body .pb-section-gap { padding-bottom: 4rem; }
+    body .mt-section-gap { margin-top: 4rem; }
+    body .mb-section-gap { margin-bottom: 4rem; }
+    body .gap-section-gap { gap: 4rem; }
+
+    /* Desktop gutters inside an already-narrow viewport. */
+    body .lg\:px-margin-desktop { padding-left: 1.25rem; padding-right: 1.25rem; }
+    body .p-margin-desktop { padding: 1.5rem; }
+
+    /* Full-bleed hero art gets unreadable when the viewport is taller than
+       it is wide; cap it so copy below stays reachable. */
+    body .h-screen { height: auto; min-height: 78vh; }
+  }
+
+  @media (max-width: 640px) {
+    body .py-section-gap { padding-top: 3rem; padding-bottom: 3rem; }
+    body .mt-section-gap { margin-top: 3rem; }
+  }
+</style>
+</head>
 <body class="bg-background font-body-md text-on-background">
 <header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">
 <div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-4">
@@ -185,7 +215,7 @@
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop w-full pt-20">
 <div class="max-w-3xl">
 <span class="font-label-caps text-label-caps text-burnished-gold mb-stack-md block uppercase animate-fade-in">EQUIPMENT &amp; SURFACES</span>
-<h1 class="font-display-lg text-display-lg mb-stack-md leading-none text-black">
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg mb-stack-md leading-none text-black">
               The Boards <br>Collection
             </h1>
 <p class="font-body-lg text-body-lg text-white/95 max-w-md leading-relaxed italic">
@@ -391,7 +421,7 @@
 <section class="w-full bg-black py-section-gap text-on-primary overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
 <div class="reveal-item active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
-<h2 class="font-headline-lg text-display-lg text-burnished-gold mb-stack-md">Industrial Precision.</h2>
+<h2 class="font-headline-lg text-display-lg-mobile lg:text-display-lg text-burnished-gold mb-stack-md">Industrial Precision.</h2>
 <p class="font-body-lg text-body-lg text-white/70 mb-stack-lg leading-relaxed italic">
               Our boards are sourced from the world's leading mills, ensuring every sheet meets the rigorous demands of professional framing. From environmental control to mechanical stability, we prioritize the protection of your work.
             </p>
