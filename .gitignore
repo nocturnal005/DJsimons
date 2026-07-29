@@ -8,3 +8,7 @@ dist/
 temp_*
 curated_catalogue_stitch.html
 animated_editorial_stitch.html
+
+# Stitch recovery caches (regenerable via tools/stitch)
+tools/stitch/stitch_assets/
+tools/stitch/screens/
