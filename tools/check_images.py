@@ -33,10 +33,15 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# The directory Vercel actually deploys, relative to the repo. "" means the
-# repo root. Anything a page references must resolve inside here, or it 404s
-# in production no matter how well it resolves on a developer's disk.
-DEPLOY_ROOT = os.path.normpath(os.path.join(REPO, ""))
+# The directory Vercel actually deploys, relative to the repo - currently the
+# project's Root Directory is "app". "" would mean the repo root. Anything a
+# deployed page references must resolve inside here, or it 404s in production
+# no matter how well it resolves on a developer's disk.
+#
+# Keep this in step with Vercel. If Root Directory is ever cleared, set this
+# to "" (and app/ can then be deleted outright).
+DEPLOY_ROOT_REL = "app"
+DEPLOY_ROOT = os.path.normpath(os.path.join(REPO, DEPLOY_ROOT_REL))
 
 # Archived raw Stitch exports, kept as a historical record of what was
 # delivered. They are never served, and rewriting them would defeat the point.
@@ -90,13 +95,17 @@ def main():
                 remote.append((rel, line_no, ref))
                 continue
 
-            # Resolve relative to the page, or to the deploy root if absolute.
-            base = DEPLOY_ROOT if ref.startswith("/") else os.path.dirname(path)
+            # Pages outside the deploy root are not served, so the escape rule
+            # cannot apply to them - but their paths must still resolve.
+            deployed = os.path.commonpath([DEPLOY_ROOT, path]) == DEPLOY_ROOT
+            root_for_abs = DEPLOY_ROOT if deployed else REPO
+
+            base = root_for_abs if ref.startswith("/") else os.path.dirname(path)
             target = os.path.normpath(os.path.join(base, ref.lstrip("/").split("?")[0]))
 
             # A ../ that climbs past the deploy root resolves fine on disk but
             # is unreachable over HTTP - the browser clamps it at the root.
-            if os.path.commonpath([DEPLOY_ROOT, target]) != DEPLOY_ROOT:
+            if deployed and os.path.commonpath([DEPLOY_ROOT, target]) != DEPLOY_ROOT:
                 escaped.append((rel, line_no, ref))
                 continue
 
