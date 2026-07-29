@@ -184,27 +184,40 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
 </head>
 <body class="bg-surface font-body-md text-on-surface">
-<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-soft-border/30">
-<div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-<div class="flex items-center gap-12">
-<a class="font-headline-lg text-headline-lg text-charcoal-black cursor-pointer tracking-tight" href="index.html">DJ SIMONS</a>
-<nav class="hidden lg:flex items-center gap-8">
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="mouldings.html">Mouldings</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="boards.html">Boards</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="#">Sundries</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="machinery.html">Machinery</a>
-<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-charcoal-black transition-colors uppercase" href="chop-service.html">Chop Service</a>
-<a aria-current="page" class="font-nav-link transition-colors uppercase text-burnished-gold" href="technical-data.html">Technical Data</a>
+<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">
+<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-4">
+<div class="flex-shrink-0">
+<a class="font-headline-lg text-2xl lg:text-3xl text-primary tracking-widest uppercase hover:text-burnished-gold transition-colors duration-300 font-semibold whitespace-nowrap" href="index.html">DJ SIMONS</a>
+</div>
+<nav aria-label="Main Navigation" class="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-8">
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="mouldings.html">MOULDINGS</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="chop-service.html">CHOP<br/>SERVICE</a>
+<a aria-current="page" class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-burnished-gold border-b-2 border-burnished-gold transition-colors py-1 font-semibold text-center leading-[1.1]" href="technical-data.html">TECHNICAL<br/>DATA</a>
 </nav>
-</div>
-<div class="flex items-center gap-6">
-<button class="text-on-surface-variant hover:text-charcoal-black transition-colors">
-<span class="material-symbols-outlined">search</span>
+<div class="flex-shrink-0 flex items-center justify-end gap-3 lg:gap-5">
+<button aria-label="Search" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button>
+<button aria-label="Account" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">person</span></button>
+<button aria-label="Cart" class="relative p-2 text-primary hover:text-burnished-gold transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-1 right-1 w-3.5 h-3.5 bg-primary text-antique-parchment text-[9px] flex items-center justify-center rounded-full font-bold">0</span>
 </button>
-<div class="w-8 h-8 rounded-full bg-charcoal-black flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+<button aria-expanded="false" aria-label="Toggle mobile navigation menu" class="lg:hidden p-2 text-primary hover:text-burnished-gold transition-colors" id="mobile-menu-toggle" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
 </div>
 </div>
+<div class="hidden lg:hidden bg-antique-parchment border-b border-soft-border/50 px-margin-mobile py-6 transition-all duration-300" id="mobile-menu-drawer">
+<nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="mouldings.html">MOULDINGS</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="chop-service.html">CHOP SERVICE</a>
+<a aria-current="page" class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-burnished-gold py-2 font-semibold" href="technical-data.html">TECHNICAL DATA</a>
+</nav>
 </div>
 </header>
 <main class="w-full pt-20 bg-surface">
@@ -446,6 +459,17 @@
 </footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-menu-drawer');
+      if (toggleBtn && drawer) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', !isExpanded);
+          drawer.classList.toggle('hidden');
+        });
+      }
+
       const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -100px 0px'
@@ -455,12 +479,8 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            // Adding a small scale effect to the line in hero if it's the hero reveal
             if(entry.target.querySelector('.origin-left')) {
                entry.target.querySelector('.origin-left').style.transform = 'scaleX(1)';
-            } else {
-               const line = entry.target.querySelector('.origin-left');
-               if(line) line.style.transform = 'scaleX(0)';
             }
           }
         });
@@ -468,16 +488,6 @@
 
       document.querySelectorAll('.scroll-reveal').forEach(el => {
         observer.observe(el);
-      });
-
-      // Interactive Header
-      const header = document.querySelector('header');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-          header.classList.add('bg-surface/95', 'shadow-sm');
-        } else {
-          header.classList.remove('bg-surface/95', 'shadow-sm');
-        }
       });
     });
   </script>

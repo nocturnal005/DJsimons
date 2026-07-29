@@ -138,31 +138,47 @@
           }
         </style></head>
 <body class="bg-background font-body-md text-on-background">
-<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border">
-<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-<div class="flex items-center gap-stack-lg">
-<a class="font-headline-md text-[28px] text-primary tracking-tight" data-path="home" href="index.html">DJ SIMONS</a>
+<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">
+<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-4">
+<div class="flex-shrink-0">
+<a class="font-headline-lg text-2xl lg:text-3xl text-primary tracking-widest uppercase hover:text-burnished-gold transition-colors duration-300 font-semibold whitespace-nowrap" href="index.html">DJ SIMONS</a>
 </div>
-<nav class="hidden lg:flex items-center gap-stack-lg h-full">
-<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="mouldings" href="mouldings.html">MOULDINGS</a>
-<a aria-current="page" class="font-nav-link text-nav-link text-burnished-gold border-b-2 border-burnished-gold py-2 uppercase" data-path="boards" href="boards.html">BOARDS</a>
-<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="sundries" href="#">SUNDRIES</a>
-<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="machinery" href="machinery.html">MACHINERY</a>
-<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="chop-service" href="chop-service.html">CHOP SERVICE</a>
-<a class="font-nav-link text-nav-link text-on-background hover:text-burnished-gold transition-colors py-2 uppercase" data-path="technical-data" href="technical-data.html">TECHNICAL DATA</a>
+<nav aria-label="Main Navigation" class="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-8">
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="mouldings.html">MOULDINGS</a>
+<a aria-current="page" class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-burnished-gold border-b-2 border-burnished-gold transition-colors py-1 font-semibold whitespace-nowrap" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="chop-service.html">CHOP<br/>SERVICE</a>
+<a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="technical-data.html">TECHNICAL<br/>DATA</a>
 </nav>
-<div class="flex items-center gap-stack-md">
-<button class="p-2 text-on-background hover:text-burnished-gold"><span class="material-symbols-outlined">search</span></button>
-<button class="p-2 text-on-background hover:text-burnished-gold"><span class="material-symbols-outlined">shopping_bag</span></button>
-<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+<div class="flex-shrink-0 flex items-center justify-end gap-3 lg:gap-5">
+<button aria-label="Search" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button>
+<button aria-label="Account" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">person</span></button>
+<button aria-label="Cart" class="relative p-2 text-primary hover:text-burnished-gold transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-1 right-1 w-3.5 h-3.5 bg-primary text-antique-parchment text-[9px] flex items-center justify-center rounded-full font-bold">0</span>
+</button>
+<button aria-expanded="false" aria-label="Toggle mobile navigation menu" class="lg:hidden p-2 text-primary hover:text-burnished-gold transition-colors" id="mobile-menu-toggle" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
 </div>
+</div>
+<div class="hidden lg:hidden bg-antique-parchment border-b border-soft-border/50 px-margin-mobile py-6 transition-all duration-300" id="mobile-menu-drawer">
+<nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="mouldings.html">MOULDINGS</a>
+<a aria-current="page" class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-burnished-gold py-2 border-b border-soft-border/30 font-semibold" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="chop-service.html">CHOP SERVICE</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 font-medium" href="technical-data.html">TECHNICAL DATA</a>
+</nav>
 </div>
 </header>
 <main class="w-full pt-20 bg-background">
 <div class="flex flex-col w-full bg-background overflow-hidden">
 <!-- Hero Section with Parallax Effect -->
 <section class="relative h-[90vh] flex items-center overflow-hidden -mt-20">
-<div class="absolute inset-0 z-0 scale-110" id="hero-parallax" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl1UCJdVvYHhntMaszJulXMzIbQHOLvWRHCAMNuMF-w43nG1c3ytZMNxgeg40CX4zObUqSnyfwgR9he6j1kpttFh9WS35R-Zh3KBvOK_3ZqAKmeIfFCGaGqLsih0nV7t7aJNabZTCQJwKz1HcEcRjB_m5pCQpul46d-TZ2ePJiZ8qqsca2voLC2Xuw9977wKbzmXWMwAUnqAqMT5aJx8GBmz37VlM1OM6ehN8QRFtJi5Akpq1ID-zlyOdm6MLoUWSrfsuyNwcgzsVc'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 z-0 scale-110" id="hero-parallax" style="background-image: url('../assets/img/background-90053c06.jpg'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background"></div>
 </div>
@@ -236,7 +252,7 @@
 <!-- Row 1 -->
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Conservation Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm5R1hW9wM3pKFagQ9XUrGn01uvWXFLIRO8oUyGX-D-_OolC9OKICc-q8UQvkBoVsFQzTZaFP7lLq9ZIZK0t_UWpXa-gvKHUR34wfWUfYO4oKaVxHNonY-uqpyIY-p_0V1LrhHJnNJP9RoTJD7ltzUoAAGrkztDGrXYr9lZP0Nv2AHeJJS8CiTNmB9HM2TGJ2KfYltVethjBHoQARY13fOb6dZPZElOdY60GSwFzWKxLXU-5ZJXaLc13KJj1l4KaKdh5WOq9F1Famj">
+<img alt="Conservation Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/conservation-barrier-706d7e2d.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Conservation Barrier Board</h4>
@@ -244,7 +260,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Heavy Grey Backing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4L9JJWNCpUlKugj61jzjshq25p3myfGGt_JmWAB-TLyQRD0damkH0jWTGqlZVBY5O6USWBFvZ4Z5GS2mc4eo0Pn_X9a6c4y8LWsvTh6Q-ZHyY6ohNTd0WRhCzfy7bAIpoERHK8HQyBJDlkjWw6noD07wZapPRsQVop-wB3SppdDGauKN-YAgTEcDJLbxhuSNe4T04JoEQgiZuPR-oe2VpWU3QzvzclxFodk0wKUNTo3MBOqMuY-0ChY1w6wQTg6mhIkKqPoH3i-fj">
+<img alt="Heavy Grey Backing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/heavy-grey-backing-b73c2afb.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Heavy-Duty Grey Backing</h4>
@@ -252,7 +268,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Thermal Heat Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUTwsPB63YN_lPu8S0o5g13SNipFvI01bpfchGFyrgQqfv5PCUtTKjO4BhDDz7C7SU2MS6wxLu7_VRlltOgzDyRj0lwHDxnOTjgrQVUKvcv4tnNvviyyXm3igJc8lD5Xg5scXTOlpm0-iVWIeOVxchZ3DcoJ2Td8RiFWHE9qV1kslDgIXt3HH_-xZSVwnmsLKCxdXKopVeLC9kgrNEDUT23FVnr7v7C8OB8Rc0g8YyMspdgvY2eXzcjQmuGde8XcFeHP7iokMtIZ_">
+<img alt="Thermal Heat Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/thermal-heat-mount-e9c87a35.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Thermal Heat-Activated Board</h4>
@@ -260,7 +276,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Archival Film" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_xOHBsqmDa-Y3Zx09liQsrMObdmbU_ryj0cVC8y7VkFgLEl9btXk952bMNr3amd_gv8_T0mZVzxxm5WiC75zEzHxyyI1Erm4Poh7kzQige8XT40zApThCaRBKqdZa1EKgCwbQNH581BAsgCUTqlN35ycauy7gwLrVVmWvakQxmZFjub9U9R93fAhWbddx5_N9i7wOjLmUIc615eagKgqEkttdVPCzgPyRw0SZNQCoNXFHXSk8HYTuKq-p2ZmysqdoIlDWyWWg81K6">
+<img alt="Archival Film" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/archival-film-b7b51cb1.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Ultra-Thin Archival Film</h4>
@@ -269,7 +285,7 @@
 <!-- Row 2 -->
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Premium Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLse5vxGCrWNN92MsIPLI_S2xIQ9VMAqtuykP5u9cbo-ssOxXBMp4EM8t7i4UfFkbrfbQOp89-KyAYIekLulusboMAL_-XuDkhUpieF7j4STHxkpSQjzY1m9jncHXJFEsS0SbSoiL9fFwHOgV9W22x9MNE65_KWCyuLrwPxImeUWDr8VXvbzJnrSXkdQrN8dTofDhsbloAMPAffV_XCjKFGz_03Bswjull3VQ8ySfF01JeEFjXHRCtgpm24N">
+<img alt="Premium Barrier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/premium-barrier-30d4daf8.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Premium Acid-Free Stack</h4>
@@ -277,7 +293,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Kraft Wood Pulp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMWRF3XqN8hp_4yNdHrXqFOLb5mR2fi6iXkvhE8lHmnKppLM9bZEx93JuRq4bCWnj2K1IrxuivH5DXLjzx0k_RNNMK2khqBgHCvlc9C2mMMv9qv-3Lnp2m7IPSyAIMmnd0cbl_6oIhCAEo6Ku-O4h_MZvPyXQC8hmszzSO7Dbxj81FPVUEWGSgzLoR8BxZ6VnnckVHaIj8luHWljQewLH__-5lEkfJ1jzs3ToG7eliBZ4P1H1WR3m2X1r878mW2qjWswxq5JthcI75">
+<img alt="Kraft Wood Pulp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/kraft-wood-pulp-6042e5f1.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Kraft Lined Wood Pulp</h4>
@@ -285,7 +301,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Cold Press Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLs2GPNqSaeY93MTU-ndXUHquKrrBGs1h4TTnrLFKkItOtwfS2byCmavy1f-V09wWGBKDWawuRBmkhPPcA6zR9U5BY49gw-hP9zGSfVwWOf9kDu_R3z2UkHIiNl1CExJwlxyIEwyaw1wlF1WiCNVgLIRf74MkPp_u1ZH-oy0rIjd5L8IS_SZRl40pC6Vx46WLNfdG24XLJ9ikjNz1xqk3_qIDYXWZXXy21NZX-2CWXs-f6trJKjOjdvOHX6B">
+<img alt="Cold Press Mount" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/cold-press-mount-d0eafa04.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Professional Cold Press Mount</h4>
@@ -293,7 +309,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Black Core Foam" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQkl1e0ThiUGxmBlPgqGlSUSjUZkY_BXZkDLNQHU66EvczgoeUE82x6IjOD7nfwQJ6O1hTY92qsCnTh9uBoWrUNc-PRHQY5pHjWRFbod0uyKL43t9S2K8Hz1PNZJ5e4iTstimHlvWrupoceUz4FzIE8WgzpKB7RvgNQ2hhTaSFiFtIyOdKlv95d577bx0k6Az3e4Aq4NQgd3_KviknnKMw_OYvVyTvt5mHiFbhHWE0-0C9KZDsbM6yOxFh9xdbC1dAlJgvJwHPaWs">
+<img alt="Black Core Foam" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/black-core-foam-cf7c89f9.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Premium Black Core Foam</h4>
@@ -302,7 +318,7 @@
 <!-- Row 3 & 4 visually using same pool to maintain 4x4 without duplicates -->
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Backing Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtj0TkZ2BSHrSP0uZg_tyh1LJZIvJ6DDCy5X0T_57Mzs394GKlMmiNAikDmcFe2m5n2AAtgt7h65whidSl3Zsyuwn6WUjY7UAHX9Plt9wM8VBiFiP3A1eyvXXC1cbA4mjmPQ2BxDM1HjZgtLQZG7iPRldmNBjq899cn5gqk-bgTZw7S2WmfysVlnTjGaV348xvOrj4qfmE7D_sURf4jRKkJdKUiMT9Uz5ruDuLHx_L6HjJf69P297iMI4Ax">
+<img alt="Backing Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/backing-samples-ea37b5d3.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Specialist Backing Selection</h4>
@@ -310,7 +326,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Specialty Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvL7YdcIc5AmNY7PBN-w-hAX-THkos2VAIPKi_neojBzZ3yWIekbV_NVBDY621HaOLLw_LXgI_04q_7G8T2VXxaCtzpoQko7TVtBGBDAgodJAPolilsR4oCSlBVIlOFVCu9qDdfiTXlbG8SN9rMDgATqpT4Epvpit0R4BGPJkCG8yKq95ts8o3FuEpZFCdURJp8oKskxC20NKebIda8lWcY4TPZzUs2yBvka7C_AYAeJizIds5Vb4wdDCiD">
+<img alt="Specialty Samples" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/specialty-samples-4a1d1b54.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Foam Core &amp; Pulp Samples</h4>
@@ -318,7 +334,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Barrier Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm5R1hW9wM3pKFagQ9XUrGn01uvWXFLIRO8oUyGX-D-_OolC9OKICc-q8UQvkBoVsFQzTZaFP7lLq9ZIZK0t_UWpXa-gvKHUR34wfWUfYO4oKaVxHNonY-uqpyIY-p_0V1LrhHJnNJP9RoTJD7ltzUoAAGrkztDGrXYr9lZP0Nv2AHeJJS8CiTNmB9HM2TGJ2KfYltVethjBHoQARY13fOb6dZPZElOdY60GSwFzWKxLXU-5ZJXaLc13KJj1l4KaKdh5WOq9F1Famj">
+<img alt="Barrier Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/conservation-barrier-706d7e2d.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BARRIER</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Archival White Barrier</h4>
@@ -326,7 +342,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Mounting Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUTwsPB63YN_lPu8S0o5g13SNipFvI01bpfchGFyrgQqfv5PCUtTKjO4BhDDz7C7SU2MS6wxLu7_VRlltOgzDyRj0lwHDxnOTjgrQVUKvcv4tnNvviyyXm3igJc8lD5Xg5scXTOlpm0-iVWIeOVxchZ3DcoJ2Td8RiFWHE9qV1kslDgIXt3HH_-xZSVwnmsLKCxdXKopVeLC9kgrNEDUT23FVnr7v7C8OB8Rc0g8YyMspdgvY2eXzcjQmuGde8XcFeHP7iokMtIZ_">
+<img alt="Mounting Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/thermal-heat-mount-e9c87a35.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Self-Adhesive Specialist</h4>
@@ -334,7 +350,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Grey Board" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4L9JJWNCpUlKugj61jzjshq25p3myfGGt_JmWAB-TLyQRD0damkH0jWTGqlZVBY5O6USWBFvZ4Z5GS2mc4eo0Pn_X9a6c4y8LWsvTh6Q-ZHyY6ohNTd0WRhCzfy7bAIpoERHK8HQyBJDlkjWw6noD07wZapPRsQVop-wB3SppdDGauKN-YAgTEcDJLbxhuSNe4T04JoEQgiZuPR-oe2VpWU3QzvzclxFodk0wKUNTo3MBOqMuY-0ChY1w6wQTg6mhIkKqPoH3i-fj">
+<img alt="Grey Board" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/heavy-grey-backing-b73c2afb.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">BACKING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Executive Smooth Grey</h4>
@@ -342,7 +358,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Film Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOTWgy6LZ49JsAVDy7An4QZw5feqPdeX4wgFOLePAgM7ffwsCPpEhhdS1CRp3_LrWhC6nhgZ7zU5bJaVFSmpDnpLTcA8nzszvcy7nNlXEBQJkgWA13RNiTxJd3jGvELefeKK33I8kwyVF9aQnCQ3B-kDuKSQw24Orrc7TGvDVJQsKm-tPW8L85ut9VZr2eO2jWddeFiQR3NLoFnYde6NUxS8VVyhY5kc4X3DFCBZ_k-uReeoEYpkghAHI88jlFWNkvzHWwTp3c7Wzd">
+<img alt="Film Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/film-detail-9893472f.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Conservation Adhesive Film</h4>
@@ -350,7 +366,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Foam Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQkl1e0ThiUGxmBlPgqGlSUSjUZkY_BXZkDLNQHU66EvczgoeUE82x6IjOD7nfwQJ6O1hTY92qsCnTh9uBoWrUNc-PRHQY5pHjWRFbod0uyKL43t9S2K8Hz1PNZJ5e4iTstimHlvWrupoceUz4FzIE8WgzpKB7RvgNQ2hhTaSFiFtIyOdKlv95d577bx0k6Az3e4Aq4NQgd3_KviknnKMw_OYvVyTvt5mHiFbhHWE0-0C9KZDsbM6yOxFh9xdbC1dAlJgvJwHPaWs">
+<img alt="Foam Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/black-core-foam-cf7c89f9.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">SPECIALTY</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Industrial Grade Foam</h4>
@@ -358,7 +374,7 @@
 </div>
 <div class="reveal-item flex flex-col group cursor-pointer active" style="opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
 <div class="relative overflow-hidden mb-stack-sm aspect-square bg-surface-container">
-<img alt="Mounting Stand" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLs2GPNqSaeY93MTU-ndXUHquKrrBGs1h4TTnrLFKkItOtwfS2byCmavy1f-V09wWGBKDWawuRBmkhPPcA6zR9U5BY49gw-hP9zGSfVwWOf9kDu_R3z2UkHIiNl1CExJwlxyIEwyaw1wlF1WiCNVgLIRf74MkPp_u1ZH-oy0rIjd5L8IS_SZRl40pC6Vx46WLNfdG24XLJ9ikjNz1xqk3_qIDYXWZXXy21NZX-2CWXs-f6trJKjOjdvOHX6B">
+<img alt="Mounting Stand" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../assets/img/cold-press-mount-d0eafa04.jpg">
 </div>
 <span class="font-label-caps text-label-caps text-burnished-gold mb-1 uppercase">MOUNTING</span>
 <h4 class="font-body-md font-bold text-black group-hover:text-burnished-gold transition-colors">Gatorfoam Heavy Duty</h4>
@@ -392,7 +408,7 @@
 </div>
 <div class="relative reveal-item active" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px);">
 <div class="aspect-video bg-white/5 p-stack-md border border-white/10">
-<img alt="Details" class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLsJFACM6LdkHMzfsKgTrWjdzHvYyzzze_yhRi6xYbYCiu9J9VvDhlIIBAx7bIa8382TKt2qSdmbrQ5LYJ8PPrgErHReTSk2gRqssGo1PIFM38gcBYdfQAW2h7TxgBbnlAZC4lYhdTgNCH2zqOjoR37FM8sxtx0UiazALob6FfZnzyu_mGKVPlSKZKhkyFH2eZ55KDCdZMeZzQDMyeYYtOtQX3zlKbtgjSNKR0jHYzJm-BI5XO_IhdM_EbKx">
+<img alt="Details" class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-1000" src="../assets/img/details-1ec87dac.jpg">
 </div>
 <div class="absolute -bottom-10 -right-10 bg-burnished-gold p-stack-lg hidden md:block">
 <span class="font-headline-md text-black">Certified <br>Suppliers</span>
@@ -440,6 +456,17 @@
         `;
         document.head.appendChild(style);
 
+        // Mobile menu toggle
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const drawer = document.getElementById('mobile-menu-drawer');
+        if (toggleBtn && drawer) {
+          toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            toggleBtn.setAttribute('aria-expanded', !isExpanded);
+            drawer.classList.toggle('hidden');
+          });
+        }
+
         // Parallax Effect
         window.addEventListener('scroll', () => {
           const scrolled = window.pageYOffset;
@@ -447,7 +474,7 @@
           if(parallax) {
             parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
           }
-        });
+        }, { passive: true });
       </script>
 </div>
 </main>
@@ -461,7 +488,7 @@
 <div class="flex flex-col gap-stack-sm">
 <span class="font-label-caps text-label-caps text-burnished-gold mb-2 uppercase">COLLECTIONS</span>
 <a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="mouldings.html">Mouldings</a>
-<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="#">Chop Service</a>
+<a class="text-white hover:text-burnished-gold font-nav-link text-nav-link uppercase" href="chop-service.html">Chop Service</a>
 </div>
 <div class="flex flex-col gap-stack-sm">
 <span class="font-label-caps text-label-caps text-burnished-gold mb-2 uppercase">SUPPORT</span>
@@ -472,8 +499,8 @@
 <div class="border-t border-white/10 pt-stack-md flex justify-between items-center text-white/40 font-label-caps text-label-caps uppercase">
 <span class="">© 2024 DJ SIMONS &amp; SONS LTD.</span>
 <div class="flex gap-stack-md">
-<span class="material-symbols-outlined">terminal</span>
-<span class="material-symbols-outlined">verified</span>
+<span aria-hidden="true" class="material-symbols-outlined">terminal</span>
+<span aria-hidden="true" class="material-symbols-outlined">verified</span>
 </div>
 </div>
 </div>

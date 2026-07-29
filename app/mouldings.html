@@ -116,27 +116,40 @@
     </script>
 </head>
 <body class="bg-antique-parchment font-body-md text-on-surface min-h-screen flex flex-col selection:bg-burnished-gold/20">
-<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-sm border-b border-soft-border/30">
-<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-<div class="flex-1">
-<a class="font-headline-lg text-[22px] tracking-widest uppercase font-semibold" data-path="home" href="index.html">DJ Simons</a>
+<header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">
+<div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-4">
+<div class="flex-shrink-0">
+<a class="font-headline-lg text-2xl lg:text-3xl text-primary tracking-widest uppercase hover:text-burnished-gold transition-colors duration-300 font-semibold whitespace-nowrap" href="index.html">DJ SIMONS</a>
 </div>
-<nav class="hidden lg:flex flex-[2] items-center justify-center gap-10" data-active-classes="text-burnished-gold">
-<a aria-current="page" class="font-nav-link text-nav-link transition-colors uppercase text-burnished-gold relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-burnished-gold" data-path="mouldings" href="mouldings.html">Mouldings</a>
-<a class="font-nav-link text-nav-link text-on-surface/60 hover:text-on-surface transition-colors uppercase" data-path="boards" href="boards.html">Boards</a>
-<a class="font-nav-link text-nav-link text-on-surface/60 hover:text-on-surface transition-colors uppercase" data-path="sundries" href="#">Sundries</a>
-<a class="font-nav-link text-nav-link text-on-surface/60 hover:text-on-surface transition-colors uppercase" data-path="machinery" href="machinery.html">Machinery</a>
-<a class="font-nav-link text-nav-link text-on-surface/60 hover:text-on-surface transition-colors uppercase" data-path="chop-service" href="chop-service.html">Chop Service</a>
-<a class="font-nav-link text-nav-link text-on-surface/60 hover:text-on-surface transition-colors uppercase" data-path="technical-data" href="technical-data.html">Technical Data</a>
+<nav aria-label="Main Navigation" class="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-8">
+<a aria-current="page" class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-burnished-gold border-b-2 border-burnished-gold transition-colors py-1 font-semibold whitespace-nowrap" href="mouldings.html">MOULDINGS</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="chop-service.html">CHOP<br/>SERVICE</a>
+<a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="technical-data.html">TECHNICAL<br/>DATA</a>
 </nav>
-<div class="flex-1 flex items-center justify-end gap-6">
-<button class="p-1 hover:text-burnished-gold transition-colors"><span class="material-symbols-outlined text-[20px] font-light">search</span></button>
-<button class="relative p-1 hover:text-burnished-gold transition-colors">
-<span class="material-symbols-outlined text-[20px] font-light">shopping_bag</span>
-<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-charcoal-black text-antique-parchment text-[9px] flex items-center justify-center rounded-full">0</span>
+<div class="flex-shrink-0 flex items-center justify-end gap-3 lg:gap-5">
+<button aria-label="Search" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button>
+<button aria-label="Account" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">person</span></button>
+<button aria-label="Cart" class="relative p-2 text-primary hover:text-burnished-gold transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-1 right-1 w-3.5 h-3.5 bg-primary text-antique-parchment text-[9px] flex items-center justify-center rounded-full font-bold">0</span>
 </button>
-<img alt="Profile" class="w-7 h-7 rounded-full object-cover grayscale border border-soft-border/50" src="https://lh3.googleusercontent.com/aida/AP1WRLuIm-JfY3kwpztPsG8ty8qJJXgpKX6ZAet2gWtQMkUS6ZJya5Tj9m5GTuMTJ7Is4kKDPscM-cqpphdqyHeuVjSUutqrYvBRmzPP5WuD_913l5HFgxOzZAAdcBBqpxG6iQVY3kQ9-jzsqux5UMhItZg-si0HZiQircso8wbdntpkxYb-PQNlstIQfBwwa554AX8V1i3KYTjl74FS1gDQSqrRVM2YQ8gA7-fqZy3KrmWMbA7aeSnbAmANAfbo"/>
+<button aria-expanded="false" aria-label="Toggle mobile navigation menu" class="lg:hidden p-2 text-primary hover:text-burnished-gold transition-colors" id="mobile-menu-toggle" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
 </div>
+</div>
+<div class="hidden lg:hidden bg-antique-parchment border-b border-soft-border/50 px-margin-mobile py-6 transition-all duration-300" id="mobile-menu-drawer">
+<nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+<a aria-current="page" class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-burnished-gold py-2 border-b border-soft-border/30 font-semibold" href="mouldings.html">MOULDINGS</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="boards.html">BOARDS</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="sundries.html">SUNDRIES</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="machinery.html">MACHINERY</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="chop-service.html">CHOP SERVICE</a>
+<a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 font-medium" href="technical-data.html">TECHNICAL DATA</a>
+</nav>
 </div>
 </header>
 <main class="flex-grow">
@@ -149,13 +162,13 @@
 <div class="lg:col-span-7 relative h-[600px] flex items-center justify-center lg:justify-start">
 <div class="relative w-full max-w-lg aspect-square">
 <div class="absolute top-0 left-0 w-64 h-80 z-20 shadow-2xl rotate-[-4deg] animate-reveal opacity-0" style="animation-delay: 0.2s">
-<img alt="Moulding Profile 1" class="w-full h-full object-cover border-[8px] border-white" src="https://lh3.googleusercontent.com/aida/AP1WRLuFvOqRR-A7FOoNk64cHBcvq9nvHnl2OMq0qu7_c6nqEV7SprZz_dIdSU0Nnd2oKq69cbhN4KZ5Wipj1IDdojscpqJOaw4scyrbztd0jMuLsQIE9aD6o-03x77hz1zj1V9ov-difHSfVLEmSFOm2HsGK5Fd_HT8JVQRfSOL1m8UR3NlHHS3DjXAXbCc-ndKhVw9697UBG9KLrYPLW5Uk0oyoEzPYOYutfHuDvukQ_yAaSWitxK0rSd5DqkD"/>
+<img alt="Moulding Profile 1" class="w-full h-full object-cover border-[8px] border-white" src="../assets/img/moulding-profile-1-7df68b9c.jpg"/>
 </div>
 <div class="absolute top-20 left-40 w-72 h-96 z-10 shadow-xl rotate-[6deg] animate-reveal opacity-0" style="animation-delay: 0.4s">
-<img alt="Moulding Profile 2" class="w-full h-full object-cover border-[8px] border-white" src="https://lh3.googleusercontent.com/aida/AP1WRLsF7FSkrsLH0VXAA8jIR1Rz6P0ZgYRlkgkbAeoOHQQs3bS3T23obtalkJEzXHX8WGtsmG86xQdFcGUyT_WSW-Pt4BZnM0XcOKf0jeIE9wAkVMnAyozCff9L2_VIOUoqMb-g6O4ghtBxE-uuFPmBVmHhJiOyWVwHzVloqdBxO1KqFuPbwV462tI_E2aBJ3X_6IHq_u-pht_bNW-0n2P8cFert4EFtwl8QLjJXb5lvKgG7oRtclEjT-HCsQPI"/>
+<img alt="Moulding Profile 2" class="w-full h-full object-cover border-[8px] border-white" src="../assets/img/moulding-profile-2-5c4c92f5.jpg"/>
 </div>
 <div class="absolute bottom-0 left-12 w-80 h-[400px] z-30 shadow-2xl rotate-[-2deg] animate-reveal opacity-0" style="animation-delay: 0.6s">
-<img alt="Moulding Profile 3" class="w-full h-full object-cover border-[8px] border-white" src="https://lh3.googleusercontent.com/aida/AP1WRLvqn1MBbpxDFlTKIJXKy-RlUHPDGjcPDbubo1Ak7rKT-BXSw5xpZAVlsIqA0CnmpM2kk6mncQIc3gtysX0dBmVvtMw4eAKbE0A3obrokklx2VwAvcC-XFMnnC7TxoERyiJ7cjSDeLxNklS_vXD2sgbbeQnNbC4YS3WTGgwqqZqxJ5MJq1fAkgLkdejJpjRxHoeG7RouOGjkvnLMn5sMZk1wBv_53BXdmb98Y7L-Ku9VzrVfIn8-Noxe9wYx"/>
+<img alt="Moulding Profile 3" class="w-full h-full object-cover border-[8px] border-white" src="../assets/img/moulding-profile-3-ff95d532.jpg"/>
 </div>
 </div>
 </div>
@@ -229,7 +242,7 @@
 </div>
 </div>
 <div class="lg:col-span-7 order-1 lg:order-2 relative aspect-[4/3] group overflow-hidden animate-reveal opacity-0">
-<img alt="Bespoke Picture Frame Mouldings Selection" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdGm1D0izaTa3dg9pXtkqoTSb315AvOIhWHLHyJJsyDiW-SKQXNRGMsw_G5Z3pOmJ7IFYg-AQKaZCNLmm1UM8QBHTUOwxHslBi_SAqduIV8vhcsYPVgDXz85RFb_8QiN1NlAUt0XIccvWot2QlMlCKNBT0v0p58Z1uekQqVfQdbfZYrvG1iHrpYTdpPXXuL4glnuHID6-XlNmFxv4NOaMXpmtFs5Y8sEzIeEtzPrOoMvn20tA7xnO9eFLwHz4TBLnjSD6pSvuu0jyu"/>
+<img alt="Bespoke Picture Frame Mouldings Selection" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 grayscale hover:grayscale-0" src="../assets/img/bespoke-picture-frame-mouldings-selection-6604c2f4.jpg"/>
 <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-700"></div>
 </div>
 </div>
@@ -246,7 +259,7 @@
 <!-- Large Feature Brick -->
 <div class="md:col-span-8 group overflow-hidden border border-soft-border/30 bg-antique-parchment">
 <div class="aspect-[16/9] overflow-hidden">
-<img alt="Curated Heritage Profiles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJJk0mwATC--o6xaRWXk1hyyNUX9wB62K9xFNBFihAnTuMV_VUic9iefv0BbNe16P4OB7S-HV1lpSqF7Tseug3oX3Tq1nOueewPwLfBALZrfCVrdBY46_rg5a5BWeugUkMHDsm0NC_3ScDBKiHO_TJdVUpPpqi7QkZirgUuuKz8IHCBg4bO31TEMsRCOCls16r8IiFWxk8tOYH6v39-oA4U0Su9N_X9tOz6zhgTA4-LneGJlMZc-2akCG3qW0jAvcLbKA_9HlJ4Pox"/>
+<img alt="Curated Heritage Profiles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/img/curated-heritage-profiles-ca3ac9e9.jpg"/>
 </div>
 </div>
 <!-- Side Info Brick -->
@@ -258,17 +271,17 @@
 <!-- Spacing Offset Brick -->
 <div class="md:col-span-4 md:mt-20">
 <div class="aspect-square bg-antique-parchment border border-soft-border/30 overflow-hidden group">
-<img alt="Detail 4" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLu2e1cbj1tLPDH8OvdZhth907QNHGdwdG376fNa1SzypzJOHbM41y2cz1q-CR2_mSItoW9thGb_oq3geygBj5bENodiy9QDoAiJ9xDQOlaW3LhJF5SshMzziOk8XoDWnQ3KW2otpu9O6Ylv4CauIbypvBzOO3m-6f29sFgYhHOYfgoOayRtkkXzpH33-RHIWNiwQKkTqUNKnMVs7r8HpcG7CACVpDnUSfES4LH9LmAbmPzo5abkP9bkpzCB"/>
+<img alt="Detail 4" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="../assets/img/detail-4-74129f5a.jpg"/>
 </div>
 </div>
 <div class="md:col-span-4">
 <div class="aspect-square bg-antique-parchment border border-soft-border/30 overflow-hidden group">
-<img alt="Detail 7" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLugAY-OD5WCjwCtZtcGb_8A2bIEalUmmKhkiZn0xxrU70ipR9qEtBogCUs2tTDIDseRnzG4NagcGp3xcOY4t4SDvb4hr8O_tl7Yyz0K6UGYEMNOVJnt0uCztZn6l1ciEELcbieTPyxk5Pwy3WKs7gw1fJ-VDOtlAgu68ZhhNNfuv_SvH7-NTEpYoj6aHYa5xvr4pk780x7LEy1Rqu6q_IteRLMYRRKexwJQV5eNbz_Jg2gRdHgwb1f31oza"/>
+<img alt="Detail 7" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="../assets/img/detail-7-9a16417b.jpg"/>
 </div>
 </div>
 <div class="md:col-span-4 md:-mt-20">
 <div class="aspect-square bg-antique-parchment border border-soft-border/30 overflow-hidden group">
-<img alt="Detail 10" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuYBKn8sE5xtPUO5smcTyhTp2nSWlmx6xPO-Ve0iNXM0TOY8V5VkMoiYBFq4PT0kjOmFiUhIzeSwJrdBQGAhc8ZmVlHEakuhkkrBKS9neX7Sq1M9jzqvFcEQ3oKFBpdOfhLNBQU803-u18Ywa23dVXjpMTIUCebQZ3pB2tnJjnSx6y3bGQ8YsH77vXqhmx5xyoXTtN63udmuF0csiqi2i1cE9DTIx840eYOTuip2uatIdYshY2DG4Mhr0CG"/>
+<img alt="Detail 10" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="../assets/img/detail-10-d8beb830.jpg"/>
 </div>
 </div>
 </div>
@@ -385,9 +398,9 @@
 <h3 class="font-label-caps text-[10px] uppercase text-subtle-grey tracking-[0.3em]">Products</h3>
 <div class="flex flex-col gap-4">
 <a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="mouldings.html">Picture Mouldings</a>
-<a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="#">Mountboards</a>
+<a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="boards.html">Mountboards</a>
 <a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="#">Workshop Sundries</a>
-<a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="#">Framing Machinery</a>
+<a class="font-body-md text-antique-parchment/50 hover:text-burnished-gold transition-colors text-[14px]" href="machinery.html">Framing Machinery</a>
 </div>
 </div>
 <div class="flex flex-col gap-8">
@@ -411,7 +424,7 @@
 <p class="font-body-md text-antique-parchment/40 text-[13px]">Join our curated mailing list for trade insights.</p>
 <div class="flex border-b border-white/20 pb-2 group focus-within:border-burnished-gold transition-colors">
 <input class="bg-transparent border-none focus:outline-none flex-grow font-body-md text-antique-parchment placeholder:text-antique-parchment/20 text-[13px]" placeholder="Email address" type="email"/>
-<button class="font-label-caps text-[10px] uppercase tracking-widest hover:text-burnished-gold transition-colors font-bold">Subscribe</button>
+<button class="font-label-caps text-[10px] uppercase tracking-widest hover:text-burnished-gold transition-colors font-bold" type="submit">Subscribe</button>
 </div>
 </div>
 </div>
@@ -424,4 +437,17 @@
 </div>
 </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+        drawer.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
 </body></html>

@@ -117,24 +117,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 </head>
 <body class="bg-background font-body-md text-on-background">
-    <header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border">
-        <div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-            <div class="flex items-center gap-stack-lg">
-                <a class="font-headline-md text-headline-md text-primary tracking-tight" data-path="home" href="index.html">DJ SIMONS</a>
+    <header class="fixed top-0 w-full z-50 bg-antique-parchment/90 backdrop-blur-md border-b border-soft-border/50">
+        <div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-4">
+            <div class="flex-shrink-0">
+                <a class="font-headline-lg text-2xl lg:text-3xl text-primary tracking-widest uppercase hover:text-burnished-gold transition-colors duration-300 font-semibold whitespace-nowrap" href="index.html">DJ SIMONS</a>
             </div>
-            <nav class="hidden lg:flex items-center gap-stack-lg h-full" data-active-classes="text-burnished-gold border-b-2 border-burnished-gold">
-                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="mouldings" href="mouldings.html">MOULDINGS</a>
-                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="boards" href="boards.html">BOARDS</a>
-                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="sundries" href="#">SUNDRIES</a>
-                <a aria-current="page" class="font-nav-link transition-colors py-2 text-burnished-gold border-b-2 border-burnished-gold" data-path="machinery" href="machinery.html">MACHINERY</a>
-                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="chop-service" href="chop-service.html">CHOP SERVICE</a>
-                <a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors py-2" data-path="technical-data" href="technical-data.html">TECHNICAL DATA</a>
+            <nav aria-label="Main Navigation" class="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-8">
+                <a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="mouldings.html">MOULDINGS</a>
+                <a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="boards.html">BOARDS</a>
+                <a class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium whitespace-nowrap" href="sundries.html">SUNDRIES</a>
+                <a aria-current="page" class="font-nav-link text-[12px] tracking-[0.1em] uppercase text-burnished-gold border-b-2 border-burnished-gold transition-colors py-1 font-semibold whitespace-nowrap" href="machinery.html">MACHINERY</a>
+                <a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="chop-service.html">CHOP<br/>SERVICE</a>
+                <a class="font-nav-link text-[11px] tracking-[0.08em] uppercase text-primary/70 hover:text-burnished-gold transition-colors py-1 font-medium text-center leading-[1.1]" href="technical-data.html">TECHNICAL<br/>DATA</a>
             </nav>
-            <div class="flex items-center gap-stack-md">
-                <button class="p-2 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">search</span></button>
-                <button class="p-2 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">shopping_bag</span></button>
-                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            <div class="flex-shrink-0 flex items-center justify-end gap-3 lg:gap-5">
+                <button aria-label="Search" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button>
+                <button aria-label="Account" class="p-2 text-primary hover:text-burnished-gold transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">person</span></button>
+                <button aria-label="Cart" class="relative p-2 text-primary hover:text-burnished-gold transition-colors" type="button">
+                    <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                    <span class="absolute top-1 right-1 w-3.5 h-3.5 bg-primary text-antique-parchment text-[9px] flex items-center justify-center rounded-full font-bold">0</span>
+                </button>
+                <button aria-expanded="false" aria-label="Toggle mobile navigation menu" class="lg:hidden p-2 text-primary hover:text-burnished-gold transition-colors" id="mobile-menu-toggle" type="button">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                </button>
             </div>
+        </div>
+        <div class="hidden lg:hidden bg-antique-parchment border-b border-soft-border/50 px-margin-mobile py-6 transition-all duration-300" id="mobile-menu-drawer">
+            <nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+                <a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="mouldings.html">MOULDINGS</a>
+                <a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="boards.html">BOARDS</a>
+                <a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="sundries.html">SUNDRIES</a>
+                <a aria-current="page" class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-burnished-gold py-2 border-b border-soft-border/30 font-semibold" href="machinery.html">MACHINERY</a>
+                <a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 border-b border-soft-border/30 font-medium" href="chop-service.html">CHOP SERVICE</a>
+                <a class="font-nav-link text-[13px] tracking-[0.1em] uppercase text-primary/80 hover:text-burnished-gold py-2 font-medium" href="technical-data.html">TECHNICAL DATA</a>
+            </nav>
         </div>
     </header>
 
@@ -511,7 +527,7 @@
                 <div class="flex flex-col gap-stack-sm">
                     <span class="font-label-caps text-label-caps text-burnished-gold mb-2">COLLECTIONS</span>
                     <a class="text-on-primary font-nav-link text-nav-link" href="mouldings.html">Mouldings</a>
-                    <a class="text-on-primary font-nav-link text-nav-link" href="#">Chop Service</a>
+                    <a class="text-on-primary font-nav-link text-nav-link" href="chop-service.html">Chop Service</a>
                 </div>
                 <div class="flex flex-col gap-stack-sm">
                     <span class="font-label-caps text-label-caps text-burnished-gold mb-2">SUPPORT</span>
@@ -522,8 +538,8 @@
             <div class="border-t border-on-secondary-fixed-variant pt-stack-md flex justify-between items-center text-subtle-grey font-label-caps text-label-caps">
                 <span>© 2024 DJ SIMONS &amp; SONS LTD.</span>
                 <div class="flex gap-stack-md">
-                    <span class="material-symbols-outlined">terminal</span>
-                    <span class="material-symbols-outlined">verified</span>
+                    <span aria-hidden="true" class="material-symbols-outlined">terminal</span>
+                    <span aria-hidden="true" class="material-symbols-outlined">verified</span>
                 </div>
             </div>
         </div>
@@ -557,6 +573,17 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const drawer = document.getElementById('mobile-menu-drawer');
+            if (toggleBtn && drawer) {
+                toggleBtn.addEventListener('click', () => {
+                    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                    toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                    drawer.classList.toggle('hidden');
+                });
+            }
+
             // Animate hero subline
             setTimeout(() => {
                 const subline = document.getElementById('hero-subline');
